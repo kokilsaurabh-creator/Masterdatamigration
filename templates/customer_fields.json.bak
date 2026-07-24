@@ -1,0 +1,63 @@
+{
+  "General Data": [
+    {"field_name": "KUNNR", "description": "Customer Number", "is_mandatory": true},
+    {"field_name": "BU_GROUP", "description": "BP Grouping", "is_mandatory": true},
+    {"field_name": "KTOKD", "description": "Customer Account Group", "is_mandatory": true},
+    {"field_name": "ANRED", "description": "Title", "is_mandatory": false},
+    {"field_name": "NAME1", "description": "Name 1", "is_mandatory": true},
+    {"field_name": "NAME2", "description": "Name 2", "is_mandatory": false},
+    {"field_name": "SORT1", "description": "Search Term 1", "is_mandatory": true},
+    {"field_name": "SORT2", "description": "Search Term 2", "is_mandatory": false},
+    {"field_name": "STRAS", "description": "Street", "is_mandatory": false},
+    {"field_name": "HAUSN", "description": "House Number", "is_mandatory": false},
+    {"field_name": "PSTLZ", "description": "Postal Code", "is_mandatory": true},
+    {"field_name": "ORT01", "description": "City", "is_mandatory": true},
+    {"field_name": "LAND1", "description": "Country", "is_mandatory": true},
+    {"field_name": "REGIO", "description": "Region", "is_mandatory": false},
+    {"field_name": "SPRAS", "description": "Language Key", "is_mandatory": true},
+    {"field_name": "TELF1", "description": "Telephone 1", "is_mandatory": false},
+    {"field_name": "SMTP_ADDR", "description": "Email Address", "is_mandatory": false}
+  ],
+  "Company Data": [
+    {"field_name": "KUNNR", "description": "Customer Number", "is_mandatory": true},
+    {"field_name": "BUKRS", "description": "Company Code", "is_mandatory": true},
+    {"field_name": "AKONT", "description": "Reconciliation Account", "is_mandatory": true},
+    {"field_name": "ZUAWA", "description": "Sort Key", "is_mandatory": false},
+    {"field_name": "ZTERM", "description": "Terms of Payment", "is_mandatory": false},
+    {"field_name": "ZWELS", "description": "Payment Methods", "is_mandatory": false},
+    {"field_name": "FDGRV", "description": "Planning Group", "is_mandatory": false},
+    {"field_name": "TOGRU", "description": "Tolerance Group", "is_mandatory": false}
+  ],
+  "Sales Data": [
+    {"field_name": "KUNNR", "description": "Customer Number", "is_mandatory": true},
+    {"field_name": "VKORG", "description": "Sales Organization", "is_mandatory": true},
+    {"field_name": "VTWEG", "description": "Distribution Channel", "is_mandatory": true},
+    {"field_name": "SPART", "description": "Division", "is_mandatory": true},
+    {"field_name": "BZIRK", "description": "Sales District", "is_mandatory": false},
+    {"field_name": "VKBUR", "description": "Sales Office", "is_mandatory": false},
+    {"field_name": "VKGRP", "description": "Sales Group", "is_mandatory": false},
+    {"field_name": "KDGRP", "description": "Customer Group", "is_mandatory": false},
+    {"field_name": "WAERS", "description": "Currency", "is_mandatory": true},
+    {"field_name": "KALKS", "description": "Customer Pricing Procedure", "is_mandatory": true},
+    {"field_name": "VSBED", "description": "Shipping Conditions", "is_mandatory": true},
+    {"field_name": "VWERK", "description": "Delivering Plant", "is_mandatory": false},
+    {"field_name": "ZTERM", "description": "Terms of Payment", "is_mandatory": true},
+    {"field_name": "INCO1", "description": "Incoterms (Part 1)", "is_mandatory": false},
+    {"field_name": "INCO2_L", "description": "Incoterms Location", "is_mandatory": false},
+    {"field_name": "KTGRD", "description": "Account Assignment Group", "is_mandatory": true}
+  ],
+  "Partner Functions": [
+    {"field_name": "KUNNR", "description": "Customer Number", "is_mandatory": true},
+    {"field_name": "VKORG", "description": "Sales Organization", "is_mandatory": true},
+    {"field_name": "VTWEG", "description": "Distribution Channel", "is_mandatory": true},
+    {"field_name": "SPART", "description": "Division", "is_mandatory": true},
+    {"field_name": "PARVW", "description": "Partner Function", "is_mandatory": true},
+    {"field_name": "KUNN2", "description": "Partner (Customer/Vendor Number)", "is_mandatory": true}
+  ],
+  "Tax Data": [
+    {"field_name": "KUNNR", "description": "Customer Number", "is_mandatory": true},
+    {"field_name": "ALAND", "description": "Departure Country", "is_mandatory": true},
+    {"field_name": "TATYP", "description": "Tax Category", "is_mandatory": true},
+    {"field_name": "TAXKD", "description": "Tax Classification", "is_mandatory": true}
+  ]
+}

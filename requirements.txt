@@ -1,3 +1,6 @@
 streamlit
 pandas
 supabase
+xlsxwriter
+openpyxl
+streamlit-option-menu
