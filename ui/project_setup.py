@@ -9,6 +9,35 @@ def render_project_setup():
     import ui.styles
     importlib.reload(ui.styles)
     st.markdown(ui.styles.LOGIN_THEME_CSS, unsafe_allow_html=True)
+    
+    user_info = st.session_state.get('user', {})
+    user_role = user_info.get('role', 'User')
+    user_id = user_info.get('id')
+    username = user_info.get('username', 'User')
+
+    # Top Integrated Header Action Row
+    top_col1, top_col2 = st.columns([5, 5])
+    with top_col1:
+        st.markdown(
+            f'<div style="padding: 4px 0;">'
+            f'<span style="background-color: #eff6ff; color: #0056b3; font-weight: 600; padding: 6px 14px; border-radius: 14px; border: 1px solid #bfdbfe; font-size: 0.85rem;">'
+            f'👤 Logged in as: <strong style="color: #0f172a;">{username}</strong> '
+            f'<span style="background-color: #0056b3; color: white; border-radius: 8px; padding: 2px 7px; font-size: 0.7rem; text-transform: uppercase;">{user_role}</span></span></div>',
+            unsafe_allow_html=True
+        )
+    with top_col2:
+        btn_c1, btn_c2 = st.columns([1.6, 1.1])
+        with btn_c1:
+            if user_role == 'Admin':
+                if st.button("⚙️ Admin Panel", key="ps_admin_btn", use_container_width=True):
+                    st.session_state['step'] = 4
+                    st.rerun()
+        with btn_c2:
+            if st.button("🚪 Logout", key="ps_logout_btn", use_container_width=True):
+                for key in list(st.session_state.keys()):
+                    del st.session_state[key]
+                st.rerun()
+
     st.markdown(ui.styles.EXPOUND_LOGO_LARGE_HTML, unsafe_allow_html=True)
     
     st.markdown(
@@ -17,22 +46,39 @@ def render_project_setup():
         unsafe_allow_html=True
     )
 
-    if 'flash_message' in st.session_state:
-        st.toast(st.session_state['flash_message'], icon="✅")
-        del st.session_state['flash_message'] 
-
     existing_projects = []
+    allowed_masters = {} # map project -> list of masters
+    
     if supabase:
         try:
-            response = supabase.table("migration_projects").select("project_name").execute()
-            existing_projects = [row['project_name'] for row in response.data]
+            if user_role == 'Admin':
+                response = supabase.table("migration_projects").select("project_name, master_type").execute()
+                for row in response.data:
+                    p = row['project_name']
+                    m = row['master_type']
+                    if p not in existing_projects: existing_projects.append(p)
+                    if p not in allowed_masters: allowed_masters[p] = []
+                    allowed_masters[p].append(m)
+            else:
+                # Standard User: fetch from permissions
+                response = supabase.table("user_permissions").select("project_name, master_type").eq("user_id", user_id).execute()
+                for row in response.data:
+                    p = row['project_name']
+                    m = row['master_type']
+                    if p not in existing_projects: existing_projects.append(p)
+                    if p not in allowed_masters: allowed_masters[p] = []
+                    allowed_masters[p].append(m)
         except Exception:
             pass
 
+    # Admin gets both tabs, User gets only 'Open Existing Project'
+    options = ["Open Existing Project", "Create New Migration"] if user_role == 'Admin' else ["Open Existing Project"]
+    icons = ["folder2-open", "plus-circle"] if user_role == 'Admin' else ["folder2-open"]
+
     mode = option_menu(
         menu_title=None,
-        options=["Open Existing Project", "Create New Migration"],
-        icons=["folder2-open", "plus-circle"],
+        options=options,
+        icons=icons,
         orientation="horizontal",
         default_index=0,
         styles={
@@ -56,23 +102,34 @@ def render_project_setup():
 
     if mode == "Open Existing Project":
         if not existing_projects:
-            st.info("No projects found. Please create one.")
+            st.info("No projects assigned to you. Please contact an Administrator.")
         else:
             st.markdown("<label class='input-label'>Select Project Space</label>", unsafe_allow_html=True)
             selected_project = st.selectbox("Select Project Space", options=existing_projects, label_visibility="collapsed")
-            st.markdown("<br>", unsafe_allow_html=True)
-            if st.button("Launch Workspace ➔", type="primary", use_container_width=True):
-                st.session_state['current_project'] = selected_project
+            
+            # Show allowed modules for this project for Standard Users
+            available_modules = allowed_masters.get(selected_project, [])
+            selected_module = None
+            
+            if user_role == 'Admin':
                 try:
                     project_row = supabase.table("migration_projects").select("master_type").eq("project_name", selected_project).single().execute()
                     if project_row.data and project_row.data.get('master_type'):
-                        st.session_state['selected_master'] = project_row.data['master_type']
-                except Exception:
-                    st.session_state['selected_master'] = "Material Master"
+                        selected_module = project_row.data['master_type']
+                except:
+                    selected_module = "Material Master"
+            else:
+                st.markdown("<label class='input-label' style='margin-top: 16px;'>Select Module Access</label>", unsafe_allow_html=True)
+                selected_module = st.selectbox("Module", options=available_modules, label_visibility="collapsed")
+
+            st.markdown("<br>", unsafe_allow_html=True)
+            if st.button("Launch Workspace ➔", type="primary", use_container_width=True):
+                st.session_state['current_project'] = selected_project
+                st.session_state['selected_master'] = selected_module or "Material Master"
                 st.session_state['step'] = 2 
                 st.rerun()
 
-    else:
+    elif mode == "Create New Migration" and user_role == 'Admin':
         st.markdown("<label class='input-label'>New Project Name</label>", unsafe_allow_html=True)
         new_project_name = st.text_input("New Project Name", placeholder="e.g. Global_Rollout_2024", label_visibility="collapsed")
         

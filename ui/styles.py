@@ -1,5 +1,5 @@
-# ui/styles.py
 import base64
+import streamlit as st
 
 # --- EXPOUND LOGO (Capital E with Solid Blue Fill) ---
 _SVG_LOGO = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
@@ -39,6 +39,11 @@ _GLOBAL_BUTTON_THEME_CSS = """
         box-shadow: 0 0 0 2px rgba(0, 86, 179, 0.3) !important;
     }
 
+    /* Universal Button Rule */
+    button, div.stButton > button, .stButton button {
+        white-space: nowrap !important;
+    }
+
     /* Primary Button Styling - Flat Enterprise Blue */
     button[kind="primary"], 
     div.stButton > button[data-testid="stBaseButton-primary"],
@@ -52,6 +57,7 @@ _GLOBAL_BUTTON_THEME_CSS = """
         box-shadow: 0 1px 2px rgba(0,0,0,0.05) !important;
         border-radius: 6px !important;
         transition: all 0.2s ease !important;
+        white-space: nowrap !important;
     }
 
     button[kind="primary"]:hover, 
@@ -62,6 +68,7 @@ _GLOBAL_BUTTON_THEME_CSS = """
         border-color: #003370 !important;
         color: #ffffff !important;
         box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
+        white-space: nowrap !important;
     }
 
     /* Secondary & Download Buttons */
@@ -74,6 +81,7 @@ _GLOBAL_BUTTON_THEME_CSS = """
         background-color: #ffffff !important;
         border-radius: 6px !important;
         box-shadow: 0 1px 2px rgba(0,0,0,0.03) !important;
+        white-space: nowrap !important;
     }
 
     button[kind="secondary"]:hover,
@@ -82,21 +90,22 @@ _GLOBAL_BUTTON_THEME_CSS = """
         border-color: #0056b3 !important;
         color: #0056b3 !important;
         background-color: #f8fafc !important;
+        white-space: nowrap !important;
     }
 
-    /* Enterprise Structural Classes */
-    .erp-card {
-        background: #ffffff;
-        border-radius: 8px;
-        padding: 1.5rem;
-        box-shadow: 0 1px 3px rgba(0,0,0,0.1), 0 1px 2px rgba(0,0,0,0.06);
-        border: 1px solid #e2e8f0;
-        margin-bottom: 1.25rem;
-        transition: box-shadow 200ms ease, transform 200ms ease;
+    /* Enterprise Structural Classes & Form Containers */
+    .erp-card, div[data-testid="stForm"], div[data-testid="stVerticalBlockBorderWrapper"] {
+        background: #ffffff !important;
+        border-radius: 8px !important;
+        padding: 1.5rem !important;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.1), 0 1px 2px rgba(0,0,0,0.06) !important;
+        border: 1px solid #e2e8f0 !important;
+        margin-bottom: 1.25rem !important;
+        transition: box-shadow 200ms ease, transform 200ms ease !important;
     }
     
-    .erp-card:hover {
-        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    .erp-card:hover, div[data-testid="stForm"]:hover, div[data-testid="stVerticalBlockBorderWrapper"]:hover {
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05) !important;
     }
 
     /* Enterprise Data Grids */

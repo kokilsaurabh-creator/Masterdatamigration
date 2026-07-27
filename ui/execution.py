@@ -7,24 +7,39 @@ from core.mapper import apply_direct_mapping
 from core.rules_engine import apply_fixed_rules
 from core.input_handler import get_required_inputs, apply_user_inputs
 
+import ui.styles
+
 def render_execution():
     st.markdown(LIGHT_THEME_CSS, unsafe_allow_html=True)
     
-    project_name = st.session_state.get('current_project')
-    master_type = st.session_state.get('selected_master')
+    project_name = st.session_state.get('current_project', 'Project')
+    master_type = st.session_state.get('selected_master', 'Master')
+    user_info = st.session_state.get('user', {})
+    username = user_info.get('username', 'User')
+    role = user_info.get('role', 'User')
     
     # --- Top Navigation ---
-    col1, col2, col3 = st.columns([1, 6, 1])
+    col1, col2, col3 = st.columns([2, 5, 3.2])
     with col1:
-        if st.button("← Back to Config"):
+        if st.button("← Back to Config", use_container_width=True):
             st.session_state['step'] = 2
             st.rerun()
     with col2:
-        st.markdown(f"<h2 style='text-align: center; margin: 0;'>{project_name} - Execution</h2>", unsafe_allow_html=True)
-        st.markdown(f"<p style='text-align: center; color: #64748b; font-weight: bold;'>Data Pipeline: {master_type}</p>", unsafe_allow_html=True)
+        st.markdown(f"<h2 style='text-align: center; margin: 0; font-size: 1.5rem; font-weight: 800;'>{project_name} - Execution</h2>", unsafe_allow_html=True)
+        st.markdown(f"<p style='text-align: center; color: #64748b; font-weight: 700; font-size: 0.8rem; text-transform: uppercase;'>Data Pipeline: {master_type}</p>", unsafe_allow_html=True)
     with col3:
-        from ui.styles import EXPOUND_LOGO_HEADER_HTML
-        st.markdown(f"<div style='display: flex; justify-content: flex-end;'>{EXPOUND_LOGO_HEADER_HTML}</div>", unsafe_allow_html=True)
+        c_badge, c_btn = st.columns([1.6, 1.2])
+        with c_badge:
+            st.markdown(
+                f'<div style="padding-top: 4px;">'
+                f'<span style="background-color: #eff6ff; color: #0056b3; font-weight: 600; padding: 5px 10px; border-radius: 12px; border: 1px solid #bfdbfe; font-size: 0.78rem; display: inline-flex; align-items: center; gap: 4px;">👤 {username} <span style="background-color: #0056b3; color: white; border-radius: 8px; padding: 1px 5px; font-size: 0.65rem; text-transform: uppercase;">{role}</span></span></div>',
+                unsafe_allow_html=True
+            )
+        with c_btn:
+            if st.button("🚪 Logout", key="exec_logout_btn", use_container_width=True):
+                for key in list(st.session_state.keys()):
+                    del st.session_state[key]
+                st.rerun()
         
     st.divider()
 

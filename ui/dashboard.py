@@ -95,7 +95,6 @@ def fetch_all_project_rules(project_name: str, master_type: str):
 def render_dashboard():
     import importlib
     import ui.styles
-    importlib.reload(ui.styles)
     st.markdown(ui.styles.LIGHT_THEME_CSS, unsafe_allow_html=True)
     
     if 'selected_nav' not in st.session_state:
@@ -104,12 +103,22 @@ def render_dashboard():
     project_name = st.session_state.get('current_project', 'Active Project')
     master_type = st.session_state.get('selected_master', 'Material Master')
     
+    user_info = st.session_state.get('user', {})
+    if user_info.get('role') != 'Admin':
+        res = supabase.table("user_permissions").select("*").eq("user_id", user_info.get('id')).eq("project_name", project_name).eq("master_type", master_type).execute()
+        if not res.data:
+            st.error(f"🚨 Unauthorized Access: You do not have permissions for {project_name} - {master_type}. Please contact an Administrator.")
+            st.stop()
+
     # --- METADATA HEADER ROW ---
-    h_col1, h_col2, h_col3, h_col4 = st.columns([3.5, 3.5, 4, 1])
+    username = user_info.get('username', 'User')
+    role = user_info.get('role', 'User')
+
+    h_col1, h_col2, h_col3, h_col4 = st.columns([3.0, 2.2, 2.6, 4.2])
     
     with h_col1:
         st.markdown(
-            f'<div style="display: flex; align-items: center; gap: 14px;">'
+            f'<div style="display: flex; align-items: center; gap: 12px;">'
             f'{ui.styles.EXPOUND_LOGO_HEADER_HTML}'
             f'<div><div class="brand-title">Expound Master Data Hub</div>'
             f'<div class="brand-subtitle">S/4HANA Migration Engine</div></div></div>',
@@ -118,12 +127,9 @@ def render_dashboard():
         
     with h_col2:
         st.markdown(
-            '<div style="border-left: 1px solid #e2e8f0; padding-left: 1.5rem; height: 100%; display: flex; flex-direction: column; justify-content: center;">'
-            '<div class="meta-label">Target System & Status</div>'
-            '<div style="display: flex; align-items: center; gap: 12px; margin-top: 2px;">'
-            '<span class="meta-value">S/4HANA Cloud</span>'
-            '<span class="status-pill"><span class="status-dot"></span>Connected</span>'
-            '</div></div>',
+            f'<div style="border-left: 1px solid #e2e8f0; padding-left: 1rem; height: 100%; display: flex; flex-direction: column; justify-content: center;">'
+            f'<div class="meta-label">Active User</div>'
+            f'<div style="margin-top: 2px;"><span style="background-color: #eff6ff; color: #0056b3; font-weight: 600; padding: 4px 12px; border-radius: 12px; border: 1px solid #bfdbfe; font-size: 0.82rem; display: inline-flex; align-items: center; gap: 6px;">👤 {username} <span style="background-color: #0056b3; color: white; border-radius: 8px; padding: 1px 6px; font-size: 0.68rem; text-transform: uppercase;">{role}</span></span></div></div>',
             unsafe_allow_html=True
         )
         
@@ -136,12 +142,24 @@ def render_dashboard():
         )
         
     with h_col4:
-        if st.button("Change", help="Switch Active Project", use_container_width=True):
-            st.session_state['step'] = 1
-            st.session_state['current_project'] = None
-            if 'generated_xml' in st.session_state:
-                del st.session_state['generated_xml']
-            st.rerun()
+        ac1, ac2, ac3 = st.columns([1.6, 1.2, 1.2])
+        with ac1:
+            if st.button("Change Project", help="Switch Active Project", use_container_width=True):
+                st.session_state['step'] = 1
+                st.session_state['current_project'] = None
+                if 'generated_xml' in st.session_state:
+                    del st.session_state['generated_xml']
+                st.rerun()
+        with ac2:
+            if role == 'Admin':
+                if st.button("⚙️ Admin", help="User Management", use_container_width=True):
+                    st.session_state['step'] = 4
+                    st.rerun()
+        with ac3:
+            if st.button("🚪 Logout", help="Sign Out", use_container_width=True):
+                for key in list(st.session_state.keys()):
+                    del st.session_state[key]
+                st.rerun()
             
     st.markdown("<hr style='margin-top: 1.2rem; margin-bottom: 1.5rem; border: none; border-top: 1px solid #e2e8f0;'>", unsafe_allow_html=True)
 
@@ -618,17 +636,49 @@ def render_dashboard():
                                         val = row_dict.get(primary_key, "")
                                         if str(val).strip():
                                             return True
-                                        for alt in ["Vendor Code", "Vendor code", "Supplier Number", "Vendor Number", "Supplier"]:
+                                        for alt in ["Vendor Code", "Vendor code", "Supplier Number", "Vendor Number", "Supplier", "Product Number", "Customer Number", "Product", "Customer", "Vendor"]:
                                             if str(row_dict.get(alt, "")).strip():
                                                 return True
                                         return False
 
                                     valid_rows = [r for r in rows_list if has_primary_key_val(r)]
+                                    
+                                    if not valid_rows: continue
+                                    
+                                    exact_column_order = [f.get("description", f.get("field_name")) for f in schema[sheet_name]]
+                                    
+                                    # --- DEDUPLICATION LOGIC PER WORKSHEET ---
+                                    # 1. Header/Root sheets ("Basic Data", "General Data") must contain only unique primary key records.
+                                    # 2. All worksheets deduplicate exact row value tuples across exact_column_order.
+                                    deduped_rows = []
+                                    seen_keys = set()
+                                    seen_tuples = set()
+                                    is_header_sheet = sheet_name in ["Basic Data", "General Data"]
+
+                                    for r in valid_rows:
+                                        pk_val = str(r.get(primary_key, "")).strip()
+                                        if not pk_val:
+                                            for alt in ["Vendor Code", "Vendor code", "Supplier Number", "Vendor Number", "Supplier", "Product Number", "Customer Number", "Product", "Customer", "Vendor"]:
+                                                pk_val = str(r.get(alt, "")).strip()
+                                                if pk_val:
+                                                    break
+                                                    
+                                        if is_header_sheet and pk_val:
+                                            if pk_val in seen_keys:
+                                                continue
+                                            seen_keys.add(pk_val)
+                                            
+                                        row_tuple = tuple(str(r.get(field, "")).strip() for field in exact_column_order)
+                                        if row_tuple in seen_tuples:
+                                            continue
+                                        seen_tuples.add(row_tuple)
+
+                                        deduped_rows.append(r)
+
+                                    valid_rows = deduped_rows
                                     num_new_rows = len(valid_rows)
                                     
                                     if num_new_rows == 0: continue
-                                    
-                                    exact_column_order = [f.get("description", f.get("field_name")) for f in schema[sheet_name]]
                                     
                                     sheet_xml_rows = ""
                                     for row_dict in valid_rows:

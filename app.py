@@ -10,8 +10,11 @@ st.set_page_config(
 )
 
 # --- SESSION STATE INITIALIZATION ---
-if 'step' not in st.session_state:
+if 'user' not in st.session_state:
+    st.session_state['step'] = 0  # 0 = Login
+elif 'step' not in st.session_state:
     st.session_state['step'] = 1 
+    
 if 'current_project' not in st.session_state:
     st.session_state['current_project'] = None
 if 'selected_master' not in st.session_state:
@@ -20,7 +23,12 @@ if 'selected_master' not in st.session_state:
 # --- ROUTING LOGIC ---
 import importlib
 
-if st.session_state['step'] == 1:
+if st.session_state['step'] == 0:
+    import ui.login
+    importlib.reload(ui.login)
+    ui.login.render_login()
+
+elif st.session_state['step'] == 1:
     import ui.project_setup
     importlib.reload(ui.project_setup)
     ui.project_setup.render_project_setup()
@@ -34,3 +42,8 @@ elif st.session_state['step'] == 3:
     import ui.execution
     importlib.reload(ui.execution)
     ui.execution.render_execution()
+
+elif st.session_state['step'] == 4:
+    import ui.admin
+    importlib.reload(ui.admin)
+    ui.admin.render_admin()
