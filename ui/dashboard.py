@@ -575,6 +575,73 @@ def render_dashboard():
                                 if pd.isna(v) or v is None: return ""
                                 s = str(v).strip()
                                 return s[:-2] if s.endswith(".0") else s
+                                
+                            # --- WILDCARD EXPANSION LOGIC ---
+                            expanded_user_materials = []
+                            for material in user_materials:
+                                if st.session_state['selected_master'] == "Material Master" and (material.get("Plant") == "*" or material.get("Distribution Channel") == "*"):
+                                    sales_org = normalize_val(material.get("Sales Organization", ""))
+                                    valid_combos = set()
+                                    
+                                    m_plant = normalize_val(material.get("Plant", ""))
+                                    m_dc = normalize_val(material.get("Distribution Channel", ""))
+                                    
+                                    for rule in saved_rules:
+                                        if normalize_val(rule.get("Sales Organization", "")) == sales_org:
+                                            r_plant = normalize_val(rule.get("Plant", ""))
+                                            r_dc = normalize_val(rule.get("Distribution Channel", ""))
+                                            
+                                            if m_plant != "*" and m_plant != r_plant:
+                                                continue
+                                            if m_dc != "*" and m_dc != r_dc:
+                                                continue
+                                                
+                                            valid_combos.add((r_plant, r_dc))
+                                            
+                                    if not valid_combos:
+                                        st.warning(f"No mapped Plant/Distribution Channel found for Sales Organization '{sales_org}' (Record: {material.get(primary_key, 'Unknown')}). Skipping XML generation for this record.")
+                                        continue
+                                        
+                                    for p, dc in valid_combos:
+                                        new_mat = material.copy()
+                                        new_mat["Plant"] = p
+                                        new_mat["Distribution Channel"] = dc
+                                        expanded_user_materials.append(new_mat)
+                                        
+                                elif st.session_state['selected_master'] == "Customer Master" and (material.get("Distribution Channel") == "*" or material.get("Division") == "*"):
+                                    sales_org = normalize_val(material.get("Sales Organization", ""))
+                                    valid_combos = set()
+                                    
+                                    m_dc = normalize_val(material.get("Distribution Channel", ""))
+                                    m_div = normalize_val(material.get("Division", ""))
+                                    
+                                    for rule in saved_rules:
+                                        if normalize_val(rule.get("Sales Organization", "")) == sales_org:
+                                            r_dc = normalize_val(rule.get("Distribution Channel", ""))
+                                            r_div = normalize_val(rule.get("Division", ""))
+                                            
+                                            if m_dc != "*" and m_dc != r_dc:
+                                                continue
+                                            if m_div != "*" and m_div != r_div:
+                                                continue
+                                                
+                                            valid_combos.add((r_dc, r_div))
+                                            
+                                    if not valid_combos:
+                                        st.warning(f"No mapped Distribution Channel/Division found for Sales Organization '{sales_org}' (Record: {material.get(primary_key, 'Unknown')}). Skipping XML generation for this record.")
+                                        continue
+                                        
+                                    for dc, div in valid_combos:
+                                        new_mat = material.copy()
+                                        new_mat["Distribution Channel"] = dc
+                                        new_mat["Division"] = div
+                                        expanded_user_materials.append(new_mat)
+                                        
+                                else:
+                                    expanded_user_materials.append(material)
+                                    
+                            user_materials = expanded_user_materials
+                            # --------------------------------
                             
                             for mat_index, material in enumerate(user_materials):
                                 matched_rule = {}
