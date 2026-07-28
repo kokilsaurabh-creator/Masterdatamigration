@@ -1,0 +1,2742 @@
+{
+  "General Data": [
+    {
+      "field_name": "KUNNR",
+      "description": "Customer Number",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "BU_GROUP",
+      "description": "BP Grouping",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "KTOKD",
+      "description": "Customer Account Group",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "NAME",
+      "description": "Name",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "NAME2",
+      "description": "Name 2",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "NAME_3",
+      "description": "Name 3",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "NAME_4",
+      "description": "Name 4",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "ANRED",
+      "description": "Title",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "ACADEMIC_TITLE",
+      "description": "Academic Title",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "FIRST_NAME",
+      "description": "First Name",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "LAST_NAME",
+      "description": "Last Name",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "MIDDLE_NAME_OR_SECOND_FORENAME",
+      "description": "Middle Name or Second Forename",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "BIRTH_NAME",
+      "description": "Birth Name",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "GENDER",
+      "description": "Gender",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "BIRTH_DATE",
+      "description": "Birth Date",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "BIRTH_PLACE",
+      "description": "Birth Place",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "CORRESPONDENCE_LANGUAGE",
+      "description": "Correspondence Language",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "SORT1",
+      "description": "Search Term 1",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "SORT2",
+      "description": "Search Term 2",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "BP_TYPE",
+      "description": "BP Type",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "BP_AUTHORIZATION_GROUP",
+      "description": "BP Authorization Group",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "CUSTOMER_AUTHORIZATION_GROUP",
+      "description": "Customer Authorization Group",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "SUPPLIER",
+      "description": "Supplier",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "GROUP_KEY",
+      "description": "Group Key",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "INDICATOR__NATURAL_PERSON_UNDER_TAX_LAWS",
+      "description": "Indicator: Natural Person Under Tax Laws",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "TRADING_PARTNER",
+      "description": "Trading Partner",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "INDICATOR__SUPPRESS_TAX_JUR__CODE_CHECK",
+      "description": "Indicator: Suppress Tax Jur. Code Check",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "LEGAL_FORM",
+      "description": "Legal Form",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "LEGAL_ENTITY",
+      "description": "Legal Entity",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "DATE_FOUNDED",
+      "description": "Date Founded",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "LIQUIDATION_DATE",
+      "description": "Liquidation Date",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "INTERNATIONAL_LOCATION_NUMBER___PART_1_",
+      "description": "International Location Number  (Part 1)",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "INTERNATIONAL_LOCATION_NUMBER___PART_2_",
+      "description": "International Location Number  (Part 2)",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "CHECK_DIGIT_FOR_THE_INTERN_LOC_NUMBER",
+      "description": "Check Digit for the Intern Loc Number",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "EXPRESS_TRAIN_STATION",
+      "description": "Express Train Station",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "TRAIN_STATION",
+      "description": "Train Station",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "COUNTY_CODE",
+      "description": "County Code",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "CITY_CODE",
+      "description": "City Code",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "EXTERNAL_BP_NUMBER",
+      "description": "External BP Number",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "DME_INDICATOR",
+      "description": "DME Indicator",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "INSTRUCTION_KEY",
+      "description": "Instruction Key",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "ALTERNATIVE_PAYER",
+      "description": "Alternative Payer",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "NIELSEN_INDICATOR",
+      "description": "Nielsen Indicator",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "REGIONAL_MARKET",
+      "description": "Regional Market",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "CUSTOMER_CLASSIFIC_",
+      "description": "Customer Classific.",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "HIERARCHY_ASSIGNMENT",
+      "description": "Hierarchy Assignment",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "INDUSTRY_CODE_1",
+      "description": "Industry Code 1",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "INDUSTRY_CODE_2",
+      "description": "Industry Code 2",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "INDUSTRY_CODE_3",
+      "description": "Industry Code 3",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "INDUSTRY_CODE_4",
+      "description": "Industry Code 4",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "INDUSTRY_CODE_5",
+      "description": "Industry Code 5",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "ATTRIBUTE_1",
+      "description": "Attribute 1",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "ATTRIBUTE_2",
+      "description": "Attribute 2",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "ATTRIBUTE_3",
+      "description": "Attribute 3",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "ATTRIBUTE_4",
+      "description": "Attribute 4",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "ATTRIBUTE_5",
+      "description": "Attribute 5",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "ATTRIBUTE_6",
+      "description": "Attribute 6",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "ATTRIBUTE_7",
+      "description": "Attribute 7",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "ATTRIBUTE_8",
+      "description": "Attribute 8",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "ATTRIBUTE_9",
+      "description": "Attribute 9",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "ATTRIBUTE_10",
+      "description": "Attribute 10",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "CONDITION_GROUP_1",
+      "description": "Condition Group 1",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "CONDITION_GROUP_2",
+      "description": "Condition Group 2",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "CONDITION_GROUP_3",
+      "description": "Condition Group 3",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "CONDITION_GROUP_4",
+      "description": "Condition Group 4",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "CONDITION_GROUP_5",
+      "description": "Condition Group 5",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "ECC_NUMBER",
+      "description": "ECC Number",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "EXCISE_REGISTRATION_NUMBER",
+      "description": "Excise Registration Number",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "EXCISE_RANGE",
+      "description": "Excise Range",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "EXCISE_DIVISION",
+      "description": "Excise Division",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "EXCISE_COMMISSIONERATE",
+      "description": "Excise Commissionerate",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "EXCISE_TAX_INDICATOR",
+      "description": "Excise Tax Indicator",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "CENTRAL_SALES_TAX_NUMBER",
+      "description": "Central Sales Tax Number",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "LOCAL_SALES_TAX_NUMBER",
+      "description": "Local Sales Tax Number",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "SERVICE_TAX_REGISTRATION_NUMBER",
+      "description": "Service Tax Registration Number",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "PERMANENT_ACCOUNT_NUMBER",
+      "description": "Permanent Account Number",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "PAN_REFERENCE_NUMBER",
+      "description": "PAN Reference Number",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "GST_TDS_REGISTRATION_NUMBER",
+      "description": "GST TDS Registration Number",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "EXTERNAL_ADDRESS_NUMBER",
+      "description": "External Address Number",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "STRAS",
+      "description": "Street",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "HAUSN",
+      "description": "House Number",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "DISTRICT",
+      "description": "District",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "DIFFERENT_CITY",
+      "description": "Different City",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "PSTLZ",
+      "description": "Postal Code",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "ORT01",
+      "description": "City",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "COUNTRY_REGION",
+      "description": "Country/Region",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "STATE",
+      "description": "State",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "TIME_ZONE",
+      "description": "Time Zone",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "TRANSPORTATION_ZONE",
+      "description": "Transportation Zone",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "BUILDING",
+      "description": "Building",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "ROOM",
+      "description": "Room",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "FLOOR",
+      "description": "Floor",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "C_O_NAME",
+      "description": "C/O Name",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "STREET_2",
+      "description": "Street 2",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "STREET_3",
+      "description": "Street 3",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "SUPPLEMENT",
+      "description": "Supplement",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "STREET_4",
+      "description": "Street 4",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "STREET_5",
+      "description": "Street 5",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "TAX_JURISDICTION_CODE",
+      "description": "Tax Jurisdiction Code",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "PO_BOX",
+      "description": "PO Box",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "PSTLZ",
+      "description": "Postal Code",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "PO_BOX_CITY",
+      "description": "PO Box City",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "PO_BOX_COUNTRY_REGION",
+      "description": "PO Box Country/Region",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "PO_BOX_STATE",
+      "description": "PO Box State",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "COMPANY_POSTAL_CODE",
+      "description": "Company Postal Code",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "LANGUAGE",
+      "description": "Language",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "PREFERRED_COMMUNICATION",
+      "description": "Preferred Communication",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "NOTES_LANGUAGE",
+      "description": "Notes Language",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "NOTES_ADDRESS",
+      "description": "Notes Address",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "TELEPHONE",
+      "description": "Telephone",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "NOTES_TELEPHONE",
+      "description": "Notes Telephone",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "ADDITIONAL_TELEPHONE_2",
+      "description": "Additional Telephone 2",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "NOTES_ADDITIONAL_TELEPHONE_2",
+      "description": "Notes Additional Telephone 2",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "ADDITIONAL_TELEPHONE_3",
+      "description": "Additional Telephone 3",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "NOTES_ADDITIONAL_TELEPHONE_3",
+      "description": "Notes Additional Telephone 3",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "MOBILE",
+      "description": "Mobile",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "NOTES_MOBILE",
+      "description": "Notes Mobile",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "ADDITIONAL_MOBILE_2",
+      "description": "Additional Mobile 2",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "NOTES_ADDITIONAL_MOBILE_2",
+      "description": "Notes Additional Mobile 2",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "ADDITIONAL_MOBILE_3",
+      "description": "Additional Mobile 3",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "NOTES_ADDITIONAL_MOBILE_3",
+      "description": "Notes Additional Mobile 3",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "FAX",
+      "description": "Fax",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "NOTES_FAX",
+      "description": "Notes Fax",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "ADDITIONAL_FAX_2",
+      "description": "Additional Fax 2",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "NOTES_ADDITIONAL_FAX_2",
+      "description": "Notes Additional Fax 2",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "ADDITIONAL_FAX_3",
+      "description": "Additional Fax 3",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "NOTES_ADDITIONAL_FAX_3",
+      "description": "Notes Additional Fax 3",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "EMAIL",
+      "description": "Email",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "NOTES_EMAIL",
+      "description": "Notes Email",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "ADDITIONAL_EMAIL_2",
+      "description": "Additional Email 2",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "NOTES_ADDITIONAL_EMAIL_2",
+      "description": "Notes Additional Email 2",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "ADDITIONAL_EMAIL_3",
+      "description": "Additional Email 3",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "NOTES_ADDITIONAL_EMAIL_3",
+      "description": "Notes Additional Email 3",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "COMMUNICATION_TYPE",
+      "description": "Communication Type",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "WEB_SITE",
+      "description": "Web Site",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "NOTES_WEB_SITE",
+      "description": "Notes Web Site",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "INDICATOR__CENTRAL_POSTING_BLOCK",
+      "description": "Indicator: Central Posting Block",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "COLLECTION_MANAGEMENT_ACTIVE",
+      "description": "Collection Management Active",
+      "is_mandatory": false
+    }
+  ],
+  "Additional Addresses": [
+    {
+      "field_name": "KUNNR",
+      "description": "Customer Number",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "EXTERNAL_ADDRESS_NUMBER",
+      "description": "External Address Number",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "STRAS",
+      "description": "Street",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "HAUSN",
+      "description": "House Number",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "DISTRICT",
+      "description": "District",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "DIFFERENT_CITY",
+      "description": "Different City",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "PSTLZ",
+      "description": "Postal Code",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "ORT01",
+      "description": "City",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "COUNTRY_REGION",
+      "description": "Country/Region",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "STATE",
+      "description": "State",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "TIME_ZONE",
+      "description": "Time Zone",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "TRANSPORTATION_ZONE",
+      "description": "Transportation Zone",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "BUILDING",
+      "description": "Building",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "ROOM",
+      "description": "Room",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "FLOOR",
+      "description": "Floor",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "C_O_NAME",
+      "description": "C/O Name",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "STREET_2",
+      "description": "Street 2",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "STREET_3",
+      "description": "Street 3",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "SUPPLEMENT",
+      "description": "Supplement",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "STREET_4",
+      "description": "Street 4",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "STREET_5",
+      "description": "Street 5",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "TAX_JURISDICTION_CODE",
+      "description": "Tax Jurisdiction Code",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "PO_BOX",
+      "description": "PO Box",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "PSTLZ",
+      "description": "Postal Code",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "PO_BOX_CITY",
+      "description": "PO Box City",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "PO_BOX_COUNTRY_REGION",
+      "description": "PO Box Country/Region",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "PO_BOX_STATE",
+      "description": "PO Box State",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "COMPANY_POSTAL_CODE",
+      "description": "Company Postal Code",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "LANGUAGE",
+      "description": "Language",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "PREFERRED_COMMUNICATION",
+      "description": "Preferred Communication",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "NOTES_LANGUAGE",
+      "description": "Notes Language",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "NOTES_ADDRESS",
+      "description": "Notes Address",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "TELEPHONE",
+      "description": "Telephone",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "NOTES_TELEFON",
+      "description": "Notes Telefon",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "ADDITIONAL_TELEPHONE_2",
+      "description": "Additional Telephone 2",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "NOTES_ADDITIONAL_TELEPHONE_2",
+      "description": "Notes Additional Telephone 2",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "ADDITIONAL_TELEPHONE_3",
+      "description": "Additional Telephone 3",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "NOTES_ADDITIONAL_TELEPHONE_3",
+      "description": "Notes Additional Telephone 3",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "MOBILE",
+      "description": "Mobile",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "NOTES_MOBILE",
+      "description": "Notes Mobile",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "ADDITIONAL_MOBILE_2",
+      "description": "Additional Mobile 2",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "NOTES_ADDITIONAL_MOBILE_2",
+      "description": "Notes Additional Mobile 2",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "ADDITIONAL_MOBILE_3",
+      "description": "Additional Mobile 3",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "NOTES_ADDITIONAL_MOBILE_3",
+      "description": "Notes Additional Mobile 3",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "FAX",
+      "description": "Fax",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "NOTES_FAX",
+      "description": "Notes Fax",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "ADDITIONAL_FAX_2",
+      "description": "Additional Fax 2",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "NOTES_ADDITIONAL_FAX_2",
+      "description": "Notes Additional Fax 2",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "ADDITIONAL_FAX_3",
+      "description": "Additional Fax 3",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "NOTES_ADDITIONAL_FAX_3",
+      "description": "Notes Additional Fax 3",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "EMAIL",
+      "description": "Email",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "NOTES_EMAIL",
+      "description": "Notes Email",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "ADDITIONAL_EMAIL_2",
+      "description": "Additional Email 2",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "NOTES_ADDITIONAL_EMAIL_2",
+      "description": "Notes Additional Email 2",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "ADDITIONAL_EMAIL_3",
+      "description": "Additional Email 3",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "NOTES_ADDITIONAL_EMAIL_3",
+      "description": "Notes Additional Email 3",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "COMMUNICATION_TYPE",
+      "description": "Communication Type",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "WEB_SITE",
+      "description": "Web Site",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "NOTES_URI",
+      "description": "Notes URI",
+      "is_mandatory": false
+    }
+  ],
+  "Address Usages": [
+    {
+      "field_name": "KUNNR",
+      "description": "Customer Number",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "EXTERNAL_ADDRESS_NUMBER",
+      "description": "External Address Number",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "ADDRESS_USAGE",
+      "description": "Address Usage",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "STANDARD_ADDRESS_USAGE_INDICATOR",
+      "description": "Standard Address Usage Indicator",
+      "is_mandatory": false
+    }
+  ],
+  "International Address Versions": [
+    {
+      "field_name": "KUNNR",
+      "description": "Customer Number",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "EXTERNAL_ADDRESS_NUMBER",
+      "description": "External Address Number",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "VERSION_ID_FOR_INTERNATIONAL_ADDRESSES",
+      "description": "Version ID for International Addresses",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "NAME",
+      "description": "Name",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "NAME2",
+      "description": "Name 2",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "NAME_3",
+      "description": "Name 3",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "NAME_4",
+      "description": "Name 4",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "FIRST_NAME",
+      "description": "First Name",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "LAST_NAME",
+      "description": "Last Name",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "MIDDLE_NAME_OR_SECOND_FORENAME",
+      "description": "Middle Name or Second Forename",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "BIRTH_NAME",
+      "description": "Birth Name",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "SORT1",
+      "description": "Search Term 1",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "SORT2",
+      "description": "Search Term 2",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "STRAS",
+      "description": "Street",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "HAUSN",
+      "description": "House Number",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "DISTRICT",
+      "description": "District",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "DIFFERENT_CITY",
+      "description": "Different City",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "ORT01",
+      "description": "City",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "BUILDING",
+      "description": "Building",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "ROOM",
+      "description": "Room",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "FLOOR",
+      "description": "Floor",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "C_O_NAME",
+      "description": "C/O Name",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "STREET_2",
+      "description": "Street 2",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "STREET_3",
+      "description": "Street 3",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "SUPPLEMENT",
+      "description": "Supplement",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "STREET_4",
+      "description": "Street 4",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "STREET_5",
+      "description": "Street 5",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "PO_BOX_CITY",
+      "description": "PO Box City",
+      "is_mandatory": false
+    }
+  ],
+  "General Texts": [
+    {
+      "field_name": "KUNNR",
+      "description": "Customer Number",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "TEXT_ID",
+      "description": "Text ID",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "SPRAS",
+      "description": "Language Key",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "TEXT",
+      "description": "Text",
+      "is_mandatory": false
+    }
+  ],
+  "Sales Data": [
+    {
+      "field_name": "KUNNR",
+      "description": "Customer Number",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "VKORG",
+      "description": "Sales Organization",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "VTWEG",
+      "description": "Distribution Channel",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "SPART",
+      "description": "Division",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "KDGRP",
+      "description": "Customer Group",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "BZIRK",
+      "description": "Sales District",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "VKBUR",
+      "description": "Sales Office",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "VKGRP",
+      "description": "Sales Group",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "ACCOUNT_AT_CUSTOMER",
+      "description": "Account at Customer",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "ORDER_PROBABILITY_OF_THE_ITEM",
+      "description": "Order Probability of the Item",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "ABC_CLASS",
+      "description": "ABC Class",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "PP_CUSTOMER_PROCEDURE",
+      "description": "PP Customer Procedure",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "WAERS",
+      "description": "Currency",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "EXCHANGE_RATE_TYPE",
+      "description": "Exchange Rate Type",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "PRICE_GROUP",
+      "description": "Price Group",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "PRICE_LIST_TYPE",
+      "description": "Price List Type",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "PRICE_PROCEDURE_DTERM_",
+      "description": "Price Procedure Dterm.",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "CUSTOMER_STATISTICS_GROUP",
+      "description": "Customer Statistics Group",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "INDICATOR__REL__FOR_SETTLEMENT_MANAGMENT",
+      "description": "Indicator: Rel. for Settlement Managment",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "DELIVERY_PRIORITY",
+      "description": "Delivery Priority",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "INDICATOR__ORDER_COMBINATION",
+      "description": "Indicator: Order Combination",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "VSBED",
+      "description": "Shipping Conditions",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "INDICATOR__POD_RELEVANT",
+      "description": "Indicator: POD-Relevant",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "POD_TIMEFRAME",
+      "description": "POD Timeframe",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "DELIVERY_PLANT",
+      "description": "Delivery Plant",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "INDICATOR__COMPLETE_DELIVERY_REQUIRED",
+      "description": "Indicator: Complete Delivery Required",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "MAXIMUM_NUMBER_OF_PART__DELIVERIES",
+      "description": "Maximum Number of Part. Deliveries",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "PARTIAL_DELIVERY_PER_ITEM",
+      "description": "Partial Delivery per Item",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "INDICATOR__UNLIMITED_TOLERANCE",
+      "description": "Indicator: Unlimited Tolerance",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "UNDERDELIVERY_TOLERANCE",
+      "description": "Underdelivery Tolerance",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "OVERDELIVERY_TOLERANCE",
+      "description": "Overdelivery Tolerance",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "INDICATOR__SUBSEQUENT_INVOICE_PROCESSING",
+      "description": "Indicator: Subsequent Invoice Processing",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "INDICATOR__REBATE",
+      "description": "Indicator: Rebate",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "INDICATOR__PRICING",
+      "description": "Indicator: Pricing",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "INVOICING_DATES",
+      "description": "Invoicing Dates",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "INVOICE_LIST_SCHEDULE",
+      "description": "Invoice List Schedule",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "INCO__VERSION",
+      "description": "Inco. Version",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "INCOTERMS",
+      "description": "Incoterms",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "INCO__LOCATION1",
+      "description": "Inco. Location1",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "INCO__LOCATION2",
+      "description": "Inco. Location2",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "PAYMENT_TERMS",
+      "description": "Payment Terms",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "PAYMENT_GUARANTEE_PROCEDURE",
+      "description": "Payment Guarantee Procedure",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "KTGRD",
+      "description": "Account Assignment Group",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "CUSTOMER_GROUP_1",
+      "description": "Customer Group 1",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "CUSTOMER_GROUP_2",
+      "description": "Customer Group 2",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "CUSTOMER_GROUP_3",
+      "description": "Customer Group 3",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "CUSTOMER_GROUP_4",
+      "description": "Customer Group 4",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "CUSTOMER_GROUP_5",
+      "description": "Customer Group 5",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "ORDER_BLOCK",
+      "description": "Order Block",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "DELIVERY_BLOCK",
+      "description": "Delivery Block",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "BILLING_BLOCK",
+      "description": "Billing Block",
+      "is_mandatory": false
+    }
+  ],
+  "Sales Partner": [
+    {
+      "field_name": "KUNNR",
+      "description": "Customer Number",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "VKORG",
+      "description": "Sales Organization",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "VTWEG",
+      "description": "Distribution Channel",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "SPART",
+      "description": "Division",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "PARVW",
+      "description": "Partner Function",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "CUSTOMER_ID",
+      "description": "Customer ID",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "VENDOR_ID",
+      "description": "Vendor ID",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "EMPLOYEE_ID",
+      "description": "Employee ID",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "CONTACT_PERSON_ID",
+      "description": "Contact Person ID",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "INDICATOR__DEFAULT",
+      "description": "Indicator: Default",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "PARTNER_DESCRIPTION",
+      "description": "Partner Description",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "EXTERNAL_ADDRESS_NUMBER",
+      "description": "External Address Number",
+      "is_mandatory": false
+    }
+  ],
+  "Sales Organization Texts": [
+    {
+      "field_name": "KUNNR",
+      "description": "Customer Number",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "VKORG",
+      "description": "Sales Organization",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "VTWEG",
+      "description": "Distribution Channel",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "SPART",
+      "description": "Division",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "TEXT_ID",
+      "description": "Text ID",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "SPRAS",
+      "description": "Language Key",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "TEXT",
+      "description": "Text",
+      "is_mandatory": false
+    }
+  ],
+  "Company Data": [
+    {
+      "field_name": "KUNNR",
+      "description": "Customer Number",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "BUKRS",
+      "description": "Company Code",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "INDICATOR__POSTING_BLOCK",
+      "description": "Indicator: Posting Block",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "PAYMENT_BLOCK",
+      "description": "Payment Block",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "PREVIOUS_ACCOUNT_NUMBER",
+      "description": "Previous Account Number",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "DUNNING_PROCEDURE",
+      "description": "Dunning Procedure",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "DUNNING_BLOCK",
+      "description": "Dunning Block",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "DUNNING_RECIPIENT",
+      "description": "Dunning Recipient",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "LAST_DUNNING_NOTICE",
+      "description": "Last Dunning Notice",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "DATE_OF_LEGAL_DUNNING_PROCEEDINGS",
+      "description": "Date of Legal Dunning Proceedings",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "DUNNING_LEVEL",
+      "description": "Dunning Level",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "DUNNING_CLERK",
+      "description": "Dunning Clerk",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "ACCOUNTING_CLERK",
+      "description": "Accounting Clerk",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "ACCOUNT_AT_CUSTOMER",
+      "description": "Account at Customer",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "USER_AT_CUSTOMER",
+      "description": "User at Customer",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "ACCOUNTING_CLERKS_TELEPHONE_NUMBER",
+      "description": "Accounting Clerks Telephone Number",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "ACCOUNTING_CLERKS_FAX_NUMBER",
+      "description": "Accounting Clerks Fax Number",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "ACCOUNTING_CLERKS_INTERNET_ADDRESS",
+      "description": "Accounting Clerks Internet Address",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "INDICATOR__DECENTRALIZED_PROCESSING",
+      "description": "Indicator: Decentralized Processing",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "ACCOUNT_MEMO",
+      "description": "Account Memo",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "COLLECTIVE_INVOICE_VARIANT",
+      "description": "Collective Invoice Variant",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "POLICY_NUMBER",
+      "description": "Policy Number",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "INSTITUTION_NUMBER",
+      "description": "Institution Number",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "AMOUNT_INSURED",
+      "description": "Amount Insured",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "VALID_TO",
+      "description": "Valid To",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "LEAD_MONTHS",
+      "description": "Lead Months",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "DEDUCTIBLE_PERCENTAGE_RATE",
+      "description": "Deductible Percentage Rate",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "PAYMENT_TERMS",
+      "description": "Payment Terms",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "PAYMENT_TERMS_KEY_FOR_CREDIT_MEMOS",
+      "description": "Payment Terms Key for Credit Memos",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "PAYMENT_METHOD_1",
+      "description": "Payment Method 1",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "PAYMENT_METHOD_2",
+      "description": "Payment Method 2",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "PAYMENT_METHOD_3",
+      "description": "Payment Method 3",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "PAYMENT_METHOD_4",
+      "description": "Payment Method 4",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "PAYMENT_METHOD_5",
+      "description": "Payment Method 5",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "PAYMENT_METHOD_6",
+      "description": "Payment Method 6",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "PAYMENT_METHOD_7",
+      "description": "Payment Method 7",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "PAYMENT_METHOD_8",
+      "description": "Payment Method 8",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "PAYMENT_METHOD_9",
+      "description": "Payment Method 9",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "PAYMENT_METHOD_10",
+      "description": "Payment Method 10",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "HOUSE_BANK",
+      "description": "House Bank",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "TOGRU",
+      "description": "Tolerance Group",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "INDICATOR__CLEARING_WITH_VENDOR",
+      "description": "Indicator: Clearing With Vendor",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "INDICATOR__PAYMENT_HISTORY_RECORD",
+      "description": "Indicator: Payment History Record",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "INDICATOR__INDIVIDUAL_PAYMENT",
+      "description": "Indicator: Individual Payment",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "INDICATOR__PAYMENT_ADVICE_BY_EDI",
+      "description": "Indicator: Payment Advice by EDI",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "LOCKBOX",
+      "description": "Lockbox",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "ALTERNATIVE_PAYER",
+      "description": "Alternative Payer",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "AKONT",
+      "description": "Reconciliation Account",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "HEAD_OFFICE",
+      "description": "Head Office",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "KEY_FOR_SORTING_ACCORDING_TO_ASSIGNMENT",
+      "description": "Key For Sorting According To Assignment",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "FDGRV",
+      "description": "Planning Group",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "RELEASE_GROUP",
+      "description": "Release Group",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "VALUE_ADJUSTMENT_KEY",
+      "description": "Value Adjustment Key",
+      "is_mandatory": false
+    }
+  ],
+  "Withholding Tax Data": [
+    {
+      "field_name": "KUNNR",
+      "description": "Customer Number",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "BUKRS",
+      "description": "Company Code",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "WITHHOLDING_TAX_TYPE",
+      "description": "Withholding Tax Type",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "WITHHOLDING_TAX_CODE",
+      "description": "Withholding Tax Code",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "INDICATOR__WITHHOLDING_TAX_AGENT",
+      "description": "Indicator: Withholding Tax Agent",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "WITHHOLDING_TAX_NUMBER",
+      "description": "Withholding Tax Number",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "TYPE_OF_RECIPIENT",
+      "description": "Type of Recipient",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "OBLIG__FROM",
+      "description": "Oblig. From",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "OBLIG__TO",
+      "description": "Oblig. To",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "EXEMPTION_NUMBER",
+      "description": "Exemption Number",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "EXEMPTION_RATE",
+      "description": "Exemption Rate",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "EXEMPTION_REASON",
+      "description": "Exemption Reason",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "EXEMPTION_FROM",
+      "description": "Exemption From",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "EXEMPTION_TO",
+      "description": "Exemption To",
+      "is_mandatory": false
+    }
+  ],
+  "Company Texts": [
+    {
+      "field_name": "KUNNR",
+      "description": "Customer Number",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "BUKRS",
+      "description": "Company Code",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "TEXT_ID",
+      "description": "Text ID",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "SPRAS",
+      "description": "Language Key",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "TEXT",
+      "description": "Text",
+      "is_mandatory": false
+    }
+  ],
+  "Bank Data": [
+    {
+      "field_name": "KUNNR",
+      "description": "Customer Number",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "BANK_COUNTRY_REGION",
+      "description": "Bank Country/Region",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "BANK_KEY",
+      "description": "Bank Key",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "ACCOUNT_NO_",
+      "description": "Account No.",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "IBAN",
+      "description": "IBAN",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "BANK_CONTROL_KEY",
+      "description": "Bank Control Key",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "ACCOUNT_HOLDER_NAME",
+      "description": "Account Holder Name",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "ACCOUNT_NAME",
+      "description": "Account Name",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "REFERENCE_DETAILS",
+      "description": "Reference Details",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "COLLECTION_AUTHORIZATION_INDICATOR",
+      "description": "Collection Authorization Indicator",
+      "is_mandatory": false
+    }
+  ],
+  "Payment Card Data": [
+    {
+      "field_name": "KUNNR",
+      "description": "Customer Number",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "DIGITAL_PAYMENT_TOKEN",
+      "description": "Digital Payment Token",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "MASKED_PAYMENT_CARD_NUMBER",
+      "description": "Masked Payment Card Number",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "PAYMENT_CARD_TYPE",
+      "description": "Payment Card Type",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "PAYMENT_CARD_HOLDER",
+      "description": "Payment Card Holder",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "VALID_FROM",
+      "description": "Valid From",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "VALID_TO",
+      "description": "Valid To",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "REASON_FOR_PAYMENT_CARD_BLOCK",
+      "description": "Reason for Payment Card Block",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "INDICATOR__STANDARD_PAYMENT_CARD",
+      "description": "Indicator: Standard Payment Card",
+      "is_mandatory": false
+    }
+  ],
+  "Industries": [
+    {
+      "field_name": "KUNNR",
+      "description": "Customer Number",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "INDUSTRY_SYSTEM",
+      "description": "Industry System",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "INDUSTRY_SECTOR",
+      "description": "Industry Sector",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "INDICATOR__STANDARD_INDUSTRY",
+      "description": "Indicator: Standard Industry",
+      "is_mandatory": false
+    }
+  ],
+  "Tax Classification": [
+    {
+      "field_name": "KUNNR",
+      "description": "Customer Number",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "COUNTRY_REGION",
+      "description": "Country/Region",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "REGIO",
+      "description": "Region",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "TAX_TYPE",
+      "description": "Tax Type",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "TAX_GROUP",
+      "description": "Tax Group",
+      "is_mandatory": true
+    }
+  ],
+  "Output Tax": [
+    {
+      "field_name": "KUNNR",
+      "description": "Customer Number",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "COUNTRY_REGION",
+      "description": "Country/Region",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "TATYP",
+      "description": "Tax Category",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "TAXKD",
+      "description": "Tax Classification",
+      "is_mandatory": false
+    }
+  ],
+  "Tax Numbers": [
+    {
+      "field_name": "KUNNR",
+      "description": "Customer Number",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "TAX_NUMBER_CATEGORY",
+      "description": "Tax Number Category",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "TAX_NUMBER",
+      "description": "Tax Number",
+      "is_mandatory": true
+    }
+  ],
+  "Identification Numbers": [
+    {
+      "field_name": "KUNNR",
+      "description": "Customer Number",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "IDENTIFICATION_TYPE",
+      "description": "Identification Type",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "IDENTIFICATION_NUMBER",
+      "description": "Identification Number",
+      "is_mandatory": true
+    }
+  ],
+  "Contact Person": [
+    {
+      "field_name": "KUNNR",
+      "description": "Customer Number",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "CONTACT_ID",
+      "description": "Contact ID",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "ANRED",
+      "description": "Title",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "ACADEMIC_TITLE",
+      "description": "Academic Title",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "FIRST_NAME",
+      "description": "First Name",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "LAST_NAME",
+      "description": "Last Name",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "MIDDLE_NAME_OR_SECOND_FORENAME",
+      "description": "Middle Name or Second Forename",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "BIRTH_NAME",
+      "description": "Birth Name",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "BIRTH_DATE",
+      "description": "Birth Date",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "CORRESPONDENCE_LANGUAGE",
+      "description": "Correspondence Language",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "DEPARTMENT",
+      "description": "Department",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "FUNCTION",
+      "description": "Function",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "VIP",
+      "description": "VIP",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "BUILDING",
+      "description": "Building",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "ROOM",
+      "description": "Room",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "FLOOR",
+      "description": "Floor",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "COUNTRY_REGION_FOR_DIALING",
+      "description": "Country/Region for Dialing",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "PREFERRED_COMMUNICATION",
+      "description": "Preferred Communication",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "TELEPHONE_NO___DIALING_CODE___NUMBER",
+      "description": "Telephone No.: Dialing Code + Number",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "MOBILE_NUMBER",
+      "description": "Mobile Number",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "FAX_NUMBER__DIALING_CODE___NUMBER",
+      "description": "Fax Number: Dialing Code + Number",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "E_MAIL_ADDRESS",
+      "description": "E-Mail Address",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "COUNTRY_REGION",
+      "description": "Country/Region",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "STATE",
+      "description": "State",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "PSTLZ",
+      "description": "Postal Code",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "ORT01",
+      "description": "City",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "STRAS",
+      "description": "Street",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "HAUSN",
+      "description": "House Number",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "BUILDING",
+      "description": "Building",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "ROOM",
+      "description": "Room",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "FLOOR",
+      "description": "Floor",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "TIME_ZONE",
+      "description": "Time Zone",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "TAX_JURISDICTION_CODE",
+      "description": "Tax Jurisdiction Code",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "PREFERRED_COMMUNICATION",
+      "description": "Preferred Communication",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "NOTES_LANGUAGE",
+      "description": "Notes Language",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "NOTES_ADDRESS",
+      "description": "Notes Address",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "TELEPHONE_NO___DIALING_CODE_NUMBER",
+      "description": "Telephone No.: Dialing Code+Number",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "NOTES_TELEPHONE",
+      "description": "Notes Telephone",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "MOBILE_NUMBER",
+      "description": "Mobile Number",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "NOTES_MOBILE_NUMBER",
+      "description": "Notes Mobile Number",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "FAX_NUMBER__DIALING_CODE_NUMBER",
+      "description": "Fax Number: Dialing Code+Number",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "NOTES_FAX_NUMBER",
+      "description": "Notes Fax Number",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "E_MAIL_ADDRESS",
+      "description": "E-Mail Address",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "NOTES_E_MAIL_ADDRESS",
+      "description": "Notes E-Mail Address",
+      "is_mandatory": false
+    }
+  ],
+  "Contact Internat. Addr. Vers.": [
+    {
+      "field_name": "KUNNR",
+      "description": "Customer Number",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "CONTACT_ID",
+      "description": "Contact ID",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "VERSION_ID_FOR_INTERNATIONAL_ADDRESSES",
+      "description": "Version ID for International Addresses",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "FIRST_NAME",
+      "description": "First Name",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "LAST_NAME",
+      "description": "Last Name",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "MIDDLE_NAME_OR_SECOND_FORENAME",
+      "description": "Middle Name or Second Forename",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "BIRTH_NAME",
+      "description": "Birth Name",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "BUILDING",
+      "description": "Building",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "ROOM",
+      "description": "Room",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "FLOOR",
+      "description": "Floor",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "ORT01",
+      "description": "City",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "STRAS",
+      "description": "Street",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "HAUSN",
+      "description": "House Number",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "BUILDING",
+      "description": "Building",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "ROOM",
+      "description": "Room",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "FLOOR",
+      "description": "Floor",
+      "is_mandatory": false
+    }
+  ],
+  "Unloading Point": [
+    {
+      "field_name": "KUNNR",
+      "description": "Customer Number",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "UNLOADING_POINT",
+      "description": "Unloading Point",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "INDICATOR__DEFAULT_UNLOADING_POINT",
+      "description": "Indicator: Default Unloading Point",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "CUSTOMER_S_FACTORY_CALENDAR",
+      "description": "Customer's Factory Calendar",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "GOODS_RECEIVING_HOURS__DEFAULT_VALUE_",
+      "description": "Goods Receiving Hours (Default Value)",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "MONDAY_MORNING_FROM",
+      "description": "Monday Morning From",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "MONDAY_MORRNING_UNTIL",
+      "description": "Monday Morrning Until",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "MONDAY_AFTERNOON_FROM",
+      "description": "Monday Afternoon From",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "MONDAY_AFTERNOON_UNTIL",
+      "description": "Monday Afternoon Until",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "TUESDAY_MORNING_FROM",
+      "description": "Tuesday Morning From",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "TUESDAY_MORRNING_UNTIL",
+      "description": "Tuesday Morrning Until",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "TUESDAY_AFTERNOON_FROM",
+      "description": "Tuesday Afternoon From",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "TUESDAY_AFTERNOON_UNTIL",
+      "description": "Tuesday Afternoon Until",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "WEDNESDAY_MORNING_FROM",
+      "description": "Wednesday Morning From",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "WEDNESDAY_MORRNING_UNTIL",
+      "description": "Wednesday Morrning Until",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "WEDNESDAY_AFTERNOON_FROM",
+      "description": "Wednesday Afternoon From",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "WEDNESDAY_AFTERNOON_UNTIL",
+      "description": "Wednesday Afternoon Until",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "THURSDAY_MORNING_FROM",
+      "description": "Thursday Morning From",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "THURSDAY_MORRNING_UNTIL",
+      "description": "Thursday Morrning Until",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "THURSDAY_AFTERNOON_FROM",
+      "description": "Thursday Afternoon From",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "THURSDAY_AFTERNOON_UNTIL",
+      "description": "Thursday Afternoon Until",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "FRIDAY_MORNING_FROM",
+      "description": "Friday Morning From",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "FRIDAY_MORRNING_UNTIL",
+      "description": "Friday Morrning Until",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "FRIDAY_AFTERNOON_FROM",
+      "description": "Friday Afternoon From",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "FRIDAY_AFTERNOON_UNTIL",
+      "description": "Friday Afternoon Until",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "SATURDAY_MORNING_FROM",
+      "description": "Saturday Morning From",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "SATURDAY_MORRNING_UNTIL",
+      "description": "Saturday Morrning Until",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "SATURDAY_AFTERNOON_FROM",
+      "description": "Saturday Afternoon From",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "SATURDAY_AFTERNOON_UNTIL",
+      "description": "Saturday Afternoon Until",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "SUNDAY_MORNING_FROM",
+      "description": "Sunday Morning From",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "SUNDAY_MORRNING_UNTIL",
+      "description": "Sunday Morrning Until",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "SUNDAY_AFTERNOON_FROM",
+      "description": "Sunday Afternoon From",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "SUNDAY_AFTERNOON_UNTIL",
+      "description": "Sunday Afternoon Until",
+      "is_mandatory": false
+    }
+  ],
+  "Receiving Point": [
+    {
+      "field_name": "KUNNR",
+      "description": "Customer Number",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "RECEIVING_POINT",
+      "description": "Receiving Point",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "UNLOADING_POINT",
+      "description": "Unloading Point",
+      "is_mandatory": false
+    }
+  ],
+  "Departments": [
+    {
+      "field_name": "KUNNR",
+      "description": "Customer Number",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "DEPARTMENT_NUMBER",
+      "description": "Department Number",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "RECEIVING_POINT",
+      "description": "Receiving Point",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "SALES_AREA__FLOOR_SPACE_",
+      "description": "Sales Area (Floor Space)",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "SALES_AREA__FLOOR_SPACE__UNIT",
+      "description": "Sales Area (Floor Space) Unit",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "LAYOUT",
+      "description": "Layout",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "AREA_SCHEMA",
+      "description": "Area Schema",
+      "is_mandatory": false
+    }
+  ],
+  "TAN And Exemption Number": [
+    {
+      "field_name": "KUNNR",
+      "description": "Customer Number",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "BUKRS",
+      "description": "Company Code",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "SECTION_CODE___SECTION_CODE_GROUP",
+      "description": "Section Code / Section Code Group",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "WITHHOLDING_TAX_TYPE",
+      "description": "Withholding Tax Type",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "WITHHOLDING_TAX_CODE",
+      "description": "Withholding Tax Code",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "EXEMPTION_FROM",
+      "description": "Exemption From",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "EXEMPTION_TO",
+      "description": "Exemption To",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "EXEMPTION_NUMBER",
+      "description": "Exemption Number",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "EXEMPTION_RATE",
+      "description": "Exemption Rate",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "EXEMPTION_REASON",
+      "description": "Exemption Reason",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "EXEMPTION_THRESHOLD_AMOUNT",
+      "description": "Exemption Threshold Amount",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "EXEMPTION_CURRENCY",
+      "description": "Exemption Currency",
+      "is_mandatory": false
+    }
+  ],
+  "Certificate Details": [
+    {
+      "field_name": "KUNNR",
+      "description": "Customer Number",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "BUKRS",
+      "description": "Company Code",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "CERTIFICATE_CATEGORY",
+      "description": "Certificate Category",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "CERTIFICATE_NUMBER",
+      "description": "Certificate Number",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "SECTION_CODE",
+      "description": "Section Code",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "VALID_FROM_DATE",
+      "description": "Valid From Date",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "VALID_TO_DATE",
+      "description": "Valid To Date",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "EXEMPTED_AMOUNT",
+      "description": "Exempted Amount",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "RATE",
+      "description": "Rate",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "CERTIFICATE_STATUS",
+      "description": "Certificate Status",
+      "is_mandatory": true
+    }
+  ]
+}

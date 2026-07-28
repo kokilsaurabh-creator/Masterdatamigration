@@ -1,0 +1,77 @@
+{
+  "General Data": [
+    {"field_name": "LIFNR", "description": "Supplier", "is_mandatory": true},
+    {"field_name": "BU_GROUP", "description": "BP Grouping", "is_mandatory": true},
+    {"field_name": "KTOKK", "description": "Supplier Account Group", "is_mandatory": false},
+    {"field_name": "NAME_FIRST", "description": "Name", "is_mandatory": false},
+    {"field_name": "NAME_LAST", "description": "Name 2", "is_mandatory": false},
+    {"field_name": "SORTL", "description": "Search Term 1", "is_mandatory": false},
+    {"field_name": "STREET", "description": "Street", "is_mandatory": false},
+    {"field_name": "HOUSE_NUM1", "description": "House Number", "is_mandatory": false},
+    {"field_name": "POST_CODE1", "description": "Postal Code", "is_mandatory": false},
+    {"field_name": "CITY1", "description": "City", "is_mandatory": false},
+    {"field_name": "COUNTRY", "description": "Country/Region", "is_mandatory": true},
+    {"field_name": "REGION", "description": "State", "is_mandatory": false},
+    {"field_name": "LANG_CORR_PERS", "description": "Correspondence Language", "is_mandatory": false},
+    {"field_name": "TELNR_LONG", "description": "Default Telephone", "is_mandatory": false},
+    {"field_name": "SMTP_ADDR", "description": "Default Email", "is_mandatory": false}
+  ],
+  "Company Data": [
+    {"field_name": "LIFNR", "description": "Supplier", "is_mandatory": true},
+    {"field_name": "BUKRS", "description": "Company Code", "is_mandatory": true},
+    {"field_name": "AKONT", "description": "Reconciliation Account", "is_mandatory": true},
+    {"field_name": "ZUAWA", "description": "Key for Sorting According to Assignment", "is_mandatory": false},
+    {"field_name": "ZTERM1", "description": "Terms of Payment Key", "is_mandatory": false},
+    {"field_name": "ZWELS_01", "description": "Payment Method 1", "is_mandatory": false},
+    {"field_name": "FDGRV", "description": "Planning Group", "is_mandatory": false},
+    {"field_name": "TOGRU", "description": "Tolerance Group", "is_mandatory": false},
+    {"field_name": "ZAHLS", "description": "Payment Block (Key)", "is_mandatory": false},
+    {"field_name": "XVERR", "description": "Indicator: Clearing with Customer", "is_mandatory": false}
+  ],
+  "Purchasing Data": [
+    {"field_name": "LIFNR", "description": "Supplier", "is_mandatory": true},
+    {"field_name": "EKORG", "description": "Purchasing Organization", "is_mandatory": true},
+    {"field_name": "WAERS", "description": "Order Currency", "is_mandatory": false},
+    {"field_name": "EKGRP", "description": "Purchasing Group", "is_mandatory": false},
+    {"field_name": "ZTERM", "description": "Terms of Payment Key", "is_mandatory": false},
+    {"field_name": "INCO1", "description": "Incoterms", "is_mandatory": false},
+    {"field_name": "INCO2", "description": "Inco.Location 1", "is_mandatory": false},
+    {"field_name": "KALKS", "description": "Group for Calculation Schema", "is_mandatory": false},
+    {"field_name": "WEBRE", "description": "Indicator: GR-Based Invoice Verification", "is_mandatory": false},
+    {"field_name": "PLIFZ", "description": "Planned Delivery Time in Days", "is_mandatory": false}
+  ],
+  "Partner Functions": [
+    {"field_name": "LIFNR", "description": "Supplier", "is_mandatory": true},
+    {"field_name": "EKORG", "description": "Purchasing Organization", "is_mandatory": true},
+    {"field_name": "PARVW", "description": "Partner Function", "is_mandatory": true},
+    {"field_name": "LIFN2", "description": "Supplier ID", "is_mandatory": false}
+  ],
+  "Bank Details": [
+    {"field_name": "LIFNR", "description": "Supplier", "is_mandatory": true},
+    {"field_name": "BANKS", "description": "Bank Country/Region Key", "is_mandatory": true},
+    {"field_name": "BANKL", "description": "Bank Keys", "is_mandatory": false},
+    {"field_name": "BANKN", "description": "Account No.", "is_mandatory": false},
+    {"field_name": "IBAN", "description": "IBAN", "is_mandatory": false},
+    {"field_name": "BKONT", "description": "Bank Control Key", "is_mandatory": false},
+    {"field_name": "KOINH", "description": "Account Holder Name", "is_mandatory": false}
+  ],
+  "Tax Numbers": [
+    {"field_name": "LIFNR", "description": "Supplier", "is_mandatory": true},
+    {"field_name": "TAXTYPE", "description": "Tax Number Category", "is_mandatory": true},
+    {"field_name": "TAXNUM", "description": "Tax Number", "is_mandatory": true}
+  ],
+  "Withholding Tax Data": [
+    {"field_name": "LIFNR", "description": "Supplier", "is_mandatory": true},
+    {"field_name": "BUKRS", "description": "Company Code", "is_mandatory": true},
+    {"field_name": "WITHT", "description": "Withholding Tax Type", "is_mandatory": true},
+    {"field_name": "WT_WITHCD", "description": "Withholding Tax Code", "is_mandatory": false},
+    {"field_name": "WT_SUBJCT", "description": "Indicator: Subject", "is_mandatory": false},
+    {"field_name": "WT_WTSTCD", "description": "Withholding Tax Identification Number", "is_mandatory": false},
+    {"field_name": "QSREC", "description": "Type of Recipient", "is_mandatory": false},
+    {"field_name": "WT_EXNR", "description": "Exemption Number", "is_mandatory": false},
+    {"field_name": "WT_EXRT", "description": "Exemption Rate", "is_mandatory": false},
+    {"field_name": "WT_WTEXRS", "description": "Exemption Reason", "is_mandatory": false},
+    {"field_name": "WT_EXDF", "description": "Exemption From", "is_mandatory": false},
+    {"field_name": "WT_EXDT", "description": "Exemption To", "is_mandatory": false}
+  ]
+}

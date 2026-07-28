@@ -1,0 +1,3382 @@
+{
+  "Basic Data": [
+    {
+      "field_name": "PRODUCT",
+      "description": "Product Number",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "MTART",
+      "description": "Product Type",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "MATKL",
+      "description": "Product Group",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "MAKTX",
+      "description": "Description",
+      "data_type": "Text",
+      "length": "40",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "SPRAS",
+      "description": "Language Key",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "MEINS",
+      "description": "Base Unit of Measure (ISO Format)",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "AENNR",
+      "description": "Change Number",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "REVLV",
+      "description": "Revision Level",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "EAN11",
+      "description": "GTIN",
+      "data_type": "Text",
+      "length": "18",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "NUMTP",
+      "description": "GTIN Category",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "SPART",
+      "description": "Division",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "BISMT",
+      "description": "Old Product Number",
+      "data_type": "Text",
+      "length": "40",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "XCHPF",
+      "description": "Indicator: Batch Management Required",
+      "data_type": "Text",
+      "length": "1",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "DATAB",
+      "description": "Valid From",
+      "data_type": "Date",
+      "length": "",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "KUNNR",
+      "description": "Competitor",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "NORMT",
+      "description": "Industry Standard Description",
+      "data_type": "Text",
+      "length": "18",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "GROES",
+      "description": "Size/Dimensions",
+      "data_type": "Text",
+      "length": "32",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "LABOR",
+      "description": "Laboratory / Design Office",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "EXTWG",
+      "description": "External Product Group",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "MTPOS_MARA",
+      "description": "General Item Category Group",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "BEGRU",
+      "description": "Authorization Group",
+      "data_type": "Text",
+      "length": "4",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "MSTAE",
+      "description": "Cross-Plant Product Status",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "MSTDE",
+      "description": "Valid-From Date",
+      "data_type": "Date",
+      "length": "",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "SERLV",
+      "description": "Level of Explicitness for Serial Number",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "QMPUR",
+      "description": "Indicator: QM in Procurement Is Active",
+      "data_type": "Text",
+      "length": "1",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "ANP",
+      "description": "ANP Code",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "BRGEW",
+      "description": "Gross Weight",
+      "data_type": "Number",
+      "length": "13",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "NTGEW",
+      "description": "Net Weight",
+      "data_type": "Number",
+      "length": "13",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "GEWEI",
+      "description": "Unit of Weight (ISO Format)",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "LAENG",
+      "description": "Length",
+      "data_type": "Number",
+      "length": "13",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "BREIT",
+      "description": "Width",
+      "data_type": "Number",
+      "length": "13",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "HOEHE",
+      "description": "Height",
+      "data_type": "Number",
+      "length": "13",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "MEABM",
+      "description": "Unit for Length/Width/Height(ISO Format)",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "VOLUM",
+      "description": "Volume",
+      "data_type": "Number",
+      "length": "13",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "VOLEH",
+      "description": "Volume Unit",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "CAPAUSE",
+      "description": "Capacity Usage",
+      "data_type": "Number",
+      "length": "15",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "CHML_CMPLNC_RLVNCE_IND",
+      "description": "Compliance Relevant",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "KZKFG",
+      "description": "Indicator: Product Is Configurable",
+      "data_type": "Text",
+      "length": "1",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "BSTME",
+      "description": "Order Unit of Measure (ISO Format)",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "EKWSL",
+      "description": "Purchasing Value Key",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "VABME",
+      "description": "State of Variable Purchase Order Unit",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "BMATN",
+      "description": "Internal Product Number",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "MFRPN",
+      "description": "Manufacturer Part Number",
+      "data_type": "Text",
+      "length": "40",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "MFRNR",
+      "description": "Manufacturer Number",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "MPROF",
+      "description": "Manufacturer Part Profile",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "TRAGR",
+      "description": "Transportation Group",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "MSTAV",
+      "description": "Cross-Distribution Chain Product Status",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "MSTDV",
+      "description": "Valid From Date for Status",
+      "data_type": "Date",
+      "length": "",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "SOM_CYCLE",
+      "description": "Billing Cycle",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "SOM_CYCLE_RULE",
+      "description": "Billing Cycle Determination Rule",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "SOM_TC_SCHEMA",
+      "description": "Assignment Schema",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "MAGRV",
+      "description": "Product Group: Packaging Materials",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "VHIART",
+      "description": "Packaging Product Type",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "ERGEW",
+      "description": "Allowed Packaging Weight",
+      "data_type": "Number",
+      "length": "13",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "ERGEI",
+      "description": "Unit of Allowed Packaging Weight",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "GEWTO",
+      "description": "Excess Weight Tolerance for HU",
+      "data_type": "Number",
+      "length": "3",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "ERVOL",
+      "description": "Allowed Packaging Volume",
+      "data_type": "Number",
+      "length": "13",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "ERVOE",
+      "description": "Unit of Allowed Packaging Volume",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "KZGVH",
+      "description": "Indicator: Product Is Closed Packaging",
+      "data_type": "Text",
+      "length": "1",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "VOLTO",
+      "description": "Excess Volume Tolerance for HU",
+      "data_type": "Number",
+      "length": "3",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "IPRKZ",
+      "description": "Period Indicator for Shelf Life",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "RAUBE",
+      "description": "Storage Conditions",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "TEMPB",
+      "description": "Temperature Conditions Indicator",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "BEHVO",
+      "description": "Container Requirements",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "STOFF",
+      "description": "Hazardous Product Number",
+      "data_type": "Text",
+      "length": "40",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "ETIAR",
+      "description": "Label Type",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "ETIFO",
+      "description": "Label Form",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "WESCH",
+      "description": "Number of Goods Receipt/Issue Slips",
+      "data_type": "Number",
+      "length": "13",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "XGCHP",
+      "description": "Indicator: Approved Batch Rec. Required",
+      "data_type": "Text",
+      "length": "1",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "MHDHB",
+      "description": "Total Shelf Life",
+      "data_type": "Number",
+      "length": "4",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "MHDRZ",
+      "description": "Minimum Remaining Shelf Life",
+      "data_type": "Number",
+      "length": "4",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "SLED_BBD",
+      "description": "Indi. for the Shelf Life Expiration Date",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "MHDLP",
+      "description": "Storage Percentage",
+      "data_type": "Number",
+      "length": "3",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "RDMHD",
+      "description": "Rounding Rule for Calculation of SLED",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "HNDLCODE",
+      "description": "Handling Indicator",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "WHMATGR",
+      "description": "Warehouse Product Group",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "HUTYP",
+      "description": "Handling Unit Type",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "PSTATQ",
+      "description": "Indicator: Quality",
+      "data_type": "Text",
+      "length": "1",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "PSTATV",
+      "description": "Indicator: Sales",
+      "data_type": "Text",
+      "length": "1",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "PSTATL",
+      "description": "Indicator: Storage",
+      "data_type": "Text",
+      "length": "1",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "PSTATE",
+      "description": "Indicator: Purchasing",
+      "data_type": "Text",
+      "length": "1",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "YY1_MATERIALCODE_PRD",
+      "description": "Material Code",
+      "data_type": "Text",
+      "length": "100",
+      "is_mandatory": false
+    }
+  ],
+  "Additional Descriptions": [
+    {
+      "field_name": "PRODUCT",
+      "description": "Product Number",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "SPRAS",
+      "description": "Language Key",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "MAKTX",
+      "description": "Product Description",
+      "data_type": "Text",
+      "length": "40",
+      "is_mandatory": true
+    }
+  ],
+  "Alternative Units of Measure": [
+    {
+      "field_name": "PRODUCT",
+      "description": "Product Number",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "MEINH",
+      "description": "Alternative Unit of Measure (ISO Format)",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "UMREN",
+      "description": "Denominator for Conversion to Base Unit",
+      "data_type": "Number",
+      "length": "5",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "UMREZ",
+      "description": "Numerator for Conversion to Base Unit",
+      "data_type": "Number",
+      "length": "5",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "EAN11",
+      "description": "GTIN",
+      "data_type": "Text",
+      "length": "18",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "NUMTP",
+      "description": "GTIN Category",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "LAENG",
+      "description": "Length",
+      "data_type": "Number",
+      "length": "13",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "BREIT",
+      "description": "Width",
+      "data_type": "Number",
+      "length": "13",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "HOEHE",
+      "description": "Height",
+      "data_type": "Number",
+      "length": "13",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "MEABM",
+      "description": "Unit for Length/Width/Height(ISO Format)",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "BRGEW",
+      "description": "Gross Weight",
+      "data_type": "Number",
+      "length": "13",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "GEWEI",
+      "description": "Unit of Weight (ISO Format)",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "VOLUM",
+      "description": "Volume",
+      "data_type": "Number",
+      "length": "13",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "VOLEH",
+      "description": "Volume Unit (ISO Format)",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "MESUB",
+      "description": "Lower-Level Unit (ISO Format)",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "CAPAUSE",
+      "description": "Capacity Usage",
+      "data_type": "Number",
+      "length": "15",
+      "is_mandatory": false
+    }
+  ],
+  "Additional GTINs": [
+    {
+      "field_name": "PRODUCT",
+      "description": "Product Number",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "MEINH",
+      "description": "Alternative Unit of Measure (ISO Format)",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "EAN11",
+      "description": "GTIN",
+      "data_type": "Text",
+      "length": "18",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "EANTP",
+      "description": "GTIN Category",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    }
+  ],
+  "Warehouse Product": [
+    {
+      "field_name": "PRODUCT",
+      "description": "Product Number",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "LGNUM",
+      "description": "Warehouse Number",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "ENTITLED",
+      "description": "Party Entitled to Dispose",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "PROCPRFL",
+      "description": "Process Block Profile",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "PTDETIND",
+      "description": "Process Type Determination Indicator",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "CCIND",
+      "description": "Cycle Counting Indicator",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "SHELF_LIFE_REQ_MM",
+      "description": "Required Minimum Shelf Life",
+      "data_type": "Number",
+      "length": "6",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "PUOM_WH",
+      "description": "Preferred UoM",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "PUT_STRA",
+      "description": "Putaway Control Indicator",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "LGBKZ",
+      "description": "Storage Section Indicator",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "LPTYP",
+      "description": "Storage Bin Type",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "BLOCK",
+      "description": "Bulk Storage Indicator",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "REM_STRA",
+      "description": "Stock Removal Control Indicator",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "STCKDETGR",
+      "description": "Stock Determination Group",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "DRDETGR",
+      "description": "Staging Area or Door Determination Group",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    }
+  ],
+  "Warehouse Product Storage Type": [
+    {
+      "field_name": "PRODUCT",
+      "description": "Product Number",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "LGNUM",
+      "description": "Warehouse Number",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "ENTITLED",
+      "description": "Party Entitled to Dispose",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "LGTYP",
+      "description": "Storage Type",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "SECTIND",
+      "description": "Storage Section Indicator",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "BINTYPE",
+      "description": "Storage Bin Type",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "BINSRCH",
+      "description": "Sort Rule for Empty Storage Bin Search",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "MAXFIXBIN",
+      "description": "Maximum Number of Bins",
+      "data_type": "Number",
+      "length": "3",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "SPLITTH",
+      "description": "Putaway Threshold of Storage Bin",
+      "data_type": "Number",
+      "length": "5",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "SEQPUT",
+      "description": "Putaway Sequence",
+      "data_type": "Text",
+      "length": "2",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "QUANCLA",
+      "description": "Quantity Classification",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "QUANCLA_PUT",
+      "description": "Putaway Quantity Classification",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "SPLITPUT",
+      "description": "Indicator: Split During Putaway",
+      "data_type": "Text",
+      "length": "1",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "SKIPPTW",
+      "description": "Indicator: Skip During Putaway",
+      "data_type": "Text",
+      "length": "1",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "NORPLN",
+      "description": "Indicator: No Replenishment",
+      "data_type": "Text",
+      "length": "1",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "REPQTY",
+      "description": "Minimum Replenishment Quantity",
+      "data_type": "Number",
+      "length": "15",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "REPQTY_UOM",
+      "description": "Unit of Measure for Replenishm. Quantity",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "MINQTY",
+      "description": "Minimum Quantity",
+      "data_type": "Number",
+      "length": "15",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "MINQTY_UOM",
+      "description": "Unit of Measure for Minimum Quantity",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "MAXQTY",
+      "description": "Maximum Quantity",
+      "data_type": "Number",
+      "length": "15",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "MAXQTY_UOM",
+      "description": "Unit of Measure for Maximum Quantity",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "PERMXQTY",
+      "description": "Min.Qty (% of Max. Qty)",
+      "data_type": "Number",
+      "length": "5",
+      "is_mandatory": false
+    }
+  ],
+  "Distribution Chains": [
+    {
+      "field_name": "PRODUCT",
+      "description": "Product Number",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "VKORG",
+      "description": "Sales Organization",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "VTWEG",
+      "description": "Distribution Channel",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "VRKME",
+      "description": "Sales Unit (ISO Format)",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "DWERK",
+      "description": "Delivery Plant",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "VMSTA",
+      "description": "Distribution-Chain-Spec. Product Status",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "VMSTD",
+      "description": "Valid-From Date for Product Status",
+      "data_type": "Date",
+      "length": "",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "SKTOF",
+      "description": "Indicator: Cash Discount",
+      "data_type": "Text",
+      "length": "1",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "LFMNG",
+      "description": "Minimum Delivery Quantity",
+      "data_type": "Number",
+      "length": "13",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "AUMNG",
+      "description": "Minimum Order Quantity in Base UoM",
+      "data_type": "Number",
+      "length": "13",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "SCMNG",
+      "description": "Delivery Unit",
+      "data_type": "Number",
+      "length": "13",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "SCHME",
+      "description": "Unit of Measure (ISO) of Delivery Unit",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "CTR_TERM_DEF",
+      "description": "Default Contract Term",
+      "data_type": "Number",
+      "length": "3",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "CTR_TERM_ALT1",
+      "description": "Alternative Contract Term 1",
+      "data_type": "Number",
+      "length": "3",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "CTR_TERM_ALT2",
+      "description": "Alternative Contract Term 2",
+      "data_type": "Number",
+      "length": "3",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "CTR_TERM_UNIT",
+      "description": "Unit for Contract Term",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "EXT_PERIOD_DEF",
+      "description": "Default Extension Period",
+      "data_type": "Number",
+      "length": "3",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "EXT_PERIOD_ALT1",
+      "description": "Alternative Extension Period 1",
+      "data_type": "Number",
+      "length": "3",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "EXT_PERIOD_ALT2",
+      "description": "Alternative Extension Period 2",
+      "data_type": "Number",
+      "length": "3",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "EXT_PERIOD_UNIT",
+      "description": "Unit for Extension Period",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "RDPRF",
+      "description": "Rounding Profile",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "KONDM",
+      "description": "Product Pricing Group",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "BONUS",
+      "description": "Volume Rebate Group",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "MTPOS",
+      "description": "Item Category Group",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "KTGRM",
+      "description": "Account Assignment Group",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "PROVG",
+      "description": "Volume Commission Group",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "PMATN",
+      "description": "Pricing Reference Product",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "VERSG",
+      "description": "Product Statistics Group",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "MVGR1",
+      "description": "Product Group 1",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "MVGR2",
+      "description": "Product Group 2",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "MVGR3",
+      "description": "Product Group 3",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "MVGR4",
+      "description": "Product Group 4",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "MVGR5",
+      "description": "Product Group 5",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    }
+  ],
+  "Tax Classification": [
+    {
+      "field_name": "PRODUCT",
+      "description": "Product Number",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "ALAND",
+      "description": "Country/Region",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "TATYP1",
+      "description": "Tax Category 1",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "TAXM1",
+      "description": "Tax Classification 1",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "TATYP2",
+      "description": "Tax Category 2",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "TAXM2",
+      "description": "Tax Classification 2",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "TATYP3",
+      "description": "Tax Category 3",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "TAXM3",
+      "description": "Tax Classification 3",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "TATYP4",
+      "description": "Tax Category 4",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "TAXM4",
+      "description": "Tax Classification 4",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "TATYP5",
+      "description": "Tax Category 5",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "TAXM5",
+      "description": "Tax Classification 5",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "TATYP6",
+      "description": "Tax Category 6",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "TAXM6",
+      "description": "Tax Classification 6",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "TATYP7",
+      "description": "Tax Category 7",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "TAXM7",
+      "description": "Tax Classification 7",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "TATYP8",
+      "description": "Tax Category 8",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "TAXM8",
+      "description": "Tax Classification 8",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "TATYP9",
+      "description": "Tax Category 9",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "TAXM9",
+      "description": "Tax Classification 9",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    }
+  ],
+  "Plant Data": [
+    {
+      "field_name": "PRODUCT",
+      "description": "Product Number",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "WERKS",
+      "description": "Plant",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "DISMM",
+      "description": "MRP Type",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "DISPO",
+      "description": "MRP Controller",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "MTVFP",
+      "description": "Availability Check",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "MMSTA",
+      "description": "Plant-Specific Product Status",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "MMSTD",
+      "description": "Valid From Date for Status",
+      "data_type": "Date",
+      "length": "",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "PRCTR",
+      "description": "Profit Center",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "AUSME",
+      "description": "Unit of Issue (ISO Format)",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "XCHPF",
+      "description": "Indicator: Batch Management Req.",
+      "data_type": "Text",
+      "length": "1",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "SERNP",
+      "description": "Serial Number Profile",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "XMCNG",
+      "description": "Indicator: Neg. Stocks Allowed in Plant",
+      "data_type": "Text",
+      "length": "1",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "EPRIO",
+      "description": "Stock Determination Group",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "LADGR",
+      "description": "Loading Group",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "KZKUP",
+      "description": "Indicator: Co-Product",
+      "data_type": "Text",
+      "length": "1",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "KZECH",
+      "description": "Batch Entry in Production",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "KZKRI",
+      "description": "Indicator: Critical Part",
+      "data_type": "Text",
+      "length": "1",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "KZDKZ",
+      "description": "Indicator: Documentation Required",
+      "data_type": "Text",
+      "length": "1",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "PRFRQ",
+      "description": "Inspection Interval in Days",
+      "data_type": "Number",
+      "length": "5",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "SSQSS",
+      "description": "Quality Management Control Key",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "QZGTP",
+      "description": "Certificate Type",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "HERKL",
+      "description": "Country/Region of Origin",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "HERKR",
+      "description": "Region of Origin",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "STEUC",
+      "description": "Taxes in International Trade",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "INDUS",
+      "description": "Material CFOP Category",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "EKGRP",
+      "description": "Purchasing Group",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "INSMK",
+      "description": "Indicator: Post to Inspection Stock",
+      "data_type": "Text",
+      "length": "1",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "KORDB",
+      "description": "Indicator: Source List Required",
+      "data_type": "Text",
+      "length": "1",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "KAUTB",
+      "description": "Indicator: Autom. Purchase Oder Allowed",
+      "data_type": "Text",
+      "length": "1",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "TAXIM",
+      "description": "Tax Indicator",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "MAABC",
+      "description": "ABC Indicator",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "DISGR",
+      "description": "MRP Group",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "STRGR",
+      "description": "Strategy Group",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "MINBE",
+      "description": "Reorder Point",
+      "data_type": "Number",
+      "length": "13",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "FXHOR",
+      "description": "Planning Time Fence",
+      "data_type": "Number",
+      "length": "3",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "LFRHY",
+      "description": "Planning Cycle",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "VRMOD",
+      "description": "Consumption Mode",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "VINT1",
+      "description": "Consumption Period: Backward",
+      "data_type": "Number",
+      "length": "3",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "VINT2",
+      "description": "Consumption Period: Forward",
+      "data_type": "Number",
+      "length": "3",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "MISKZ",
+      "description": "Mixed MRP Indicator",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "PRGRP",
+      "description": "Planning Product",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "PRWRK",
+      "description": "Planning Plant",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "UMREF",
+      "description": "Plng. Conv. Factor",
+      "data_type": "Text",
+      "length": "10",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "DISLS",
+      "description": "Lot Sizing Procedure",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "BSTMI",
+      "description": "Minimum Lot Size",
+      "data_type": "Number",
+      "length": "13",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "BSTMA",
+      "description": "Maximum Lot Size",
+      "data_type": "Number",
+      "length": "13",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "BSTFE",
+      "description": "Fixed Lot Size",
+      "data_type": "Number",
+      "length": "13",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "LAGPR",
+      "description": "Storage Cost Indicator",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "LOSFX",
+      "description": "Lot Size Independant Cost",
+      "data_type": "Number",
+      "length": "14",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "WAERS",
+      "description": "Currency for Lot Size Ind. Cost",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "AUSSS",
+      "description": "Assembly Scrap (%)",
+      "data_type": "Number",
+      "length": "5",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "MABST",
+      "description": "Maximum Stock Level",
+      "data_type": "Number",
+      "length": "13",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "BSTRF",
+      "description": "Rounding Value",
+      "data_type": "Number",
+      "length": "13",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "TAKZT",
+      "description": "Takt Time",
+      "data_type": "Number",
+      "length": "3",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "RDPRF",
+      "description": "Rounding Profile",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "EISBE",
+      "description": "Safety Stock",
+      "data_type": "Number",
+      "length": "13",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "EISLO",
+      "description": "Minimum Safety Stock",
+      "data_type": "Number",
+      "length": "13",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "SHZET",
+      "description": "Safety Time (in Workdays)",
+      "data_type": "Number",
+      "length": "2",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "LGRAD",
+      "description": "Service Level Warehouse",
+      "data_type": "Number",
+      "length": "3",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "RWPRO",
+      "description": "Coverage Profile",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "SHFLG",
+      "description": "Safety Time Indicator",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "SHPRO",
+      "description": "Safety Time Period Profile",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "AHDIS",
+      "description": "MRP Relevancy for Dependent Requirements",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "SFTY_STK_METH",
+      "description": "Safety Stock Method",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "SBDKZ",
+      "description": "Individual / Collective Requirements",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "KAUSF",
+      "description": "Component Scrap in Percent",
+      "data_type": "Number",
+      "length": "5",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "KZBED",
+      "description": "Requirements Group",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "KZAUS",
+      "description": "Discontinuation Ind.",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "AUSDT",
+      "description": "Effective-Out Date",
+      "data_type": "Date",
+      "length": "",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "NFMAT",
+      "description": "Follow-Up Product",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "SAUFT",
+      "description": "Indicator: Repetitive Manufa. Allow",
+      "data_type": "Text",
+      "length": "1",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "SFEPR",
+      "description": "Repetitive Manufacturing Profile",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "BESKZ",
+      "description": "Procurement Type",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "SOBSL",
+      "description": "Special Procurement Type",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "LGPRO",
+      "description": "Issue Storage Location",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "WZEIT",
+      "description": "Replenishment Lead Time",
+      "data_type": "Number",
+      "length": "3",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "KZPSP",
+      "description": "Cross-Project",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "LGFSB",
+      "description": "Default Storage Loc. for Ext. Procuremet",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "MRPPP",
+      "description": "Planning Calendar",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "DZEIT",
+      "description": "In-House Production Time",
+      "data_type": "Number",
+      "length": "3",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "PLIFZ",
+      "description": "Planned Delivery Time",
+      "data_type": "Number",
+      "length": "3",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "WEBAZ",
+      "description": "Goods Receipt Processing Time",
+      "data_type": "Number",
+      "length": "3",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "RGEKZ",
+      "description": "Backflush",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "VSPVB",
+      "description": "Default Supply Area",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "FABKZ",
+      "description": "JIT Delivery Sched.",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "SCHGT",
+      "description": "Indicator: Bulk Material",
+      "data_type": "Text",
+      "length": "1",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "FHORI",
+      "description": "Scheduling Margin Key",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "PERKZ",
+      "description": "Period Type",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "PERIV",
+      "description": "Fiscal Year Variant",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "AUFTL",
+      "description": "Splitting Indicator",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "VRBWK",
+      "description": "Reference Plant for Consumption",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "VRBMT",
+      "description": "Reference Product for Consumption",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "VRBDT",
+      "description": "Use Referenced Consumption Data Until",
+      "data_type": "Date",
+      "length": "",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "VRBFK",
+      "description": "Multiplier for Reference Product",
+      "data_type": "Number",
+      "length": "4",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "AUTRU",
+      "description": "Indicator: Reset Forecast Model Auto",
+      "data_type": "Text",
+      "length": "1",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "KZKFK",
+      "description": "Indicator: Correction Factors",
+      "data_type": "Text",
+      "length": "1",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "BASMG",
+      "description": "Base Quantity",
+      "data_type": "Number",
+      "length": "13",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "UEETO",
+      "description": "Overdelivery Tolerance Limit",
+      "data_type": "Number",
+      "length": "3",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "UNETO",
+      "description": "Underdelivery Tolerance Limit",
+      "data_type": "Number",
+      "length": "3",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "UEETK",
+      "description": "Indicator: Unlimit. Overdelivery Allowed",
+      "data_type": "Text",
+      "length": "1",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "FRTME",
+      "description": "Production Unit (ISO Format)",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "FEVOR",
+      "description": "Production Supervisor",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "SFCPF",
+      "description": "Production Scheduling Profile",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "RUEZT",
+      "description": "Setup and Teardown Time",
+      "data_type": "Number",
+      "length": "5",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "TRANZ",
+      "description": "Interoperation Time",
+      "data_type": "Number",
+      "length": "5",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "BEARZ",
+      "description": "Processing Time",
+      "data_type": "Number",
+      "length": "5",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "ABCIN",
+      "description": "Cycle Counting Indicator",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "CCFIX",
+      "description": "Indicator: Cycle Counting Fixed",
+      "data_type": "Text",
+      "length": "1",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "NCOST",
+      "description": "Do Not Cost",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "AWSLS",
+      "description": "Variance Key",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "LOSGR",
+      "description": "Costing Lot Size",
+      "data_type": "Number",
+      "length": "13",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "MAXLZ",
+      "description": "Maximum Storage Period",
+      "data_type": "Number",
+      "length": "5",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "LZEIH",
+      "description": "Unit for Maximum Storage Period",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "VRVEZ",
+      "description": "Shipping Setup Time",
+      "data_type": "Number",
+      "length": "5",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "VBEAZ",
+      "description": "Shipping Processing Time",
+      "data_type": "Number",
+      "length": "5",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "VBAMG",
+      "description": "Base Quantity for Capacity Planning",
+      "data_type": "Number",
+      "length": "13",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "PSTATL",
+      "description": "Indicator: Storage",
+      "data_type": "Text",
+      "length": "1",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "PSTATA",
+      "description": "Indicator: Work Scheduling",
+      "data_type": "Text",
+      "length": "1",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "PSTATE",
+      "description": "Indicator: Purchasing",
+      "data_type": "Text",
+      "length": "1",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "PSTATQ",
+      "description": "Indicator: Quality",
+      "data_type": "Text",
+      "length": "1",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "PSTATV",
+      "description": "Indicator: Sales",
+      "data_type": "Text",
+      "length": "1",
+      "is_mandatory": false
+    }
+  ],
+  "Forecasting Data": [
+    {
+      "field_name": "PRODUCT",
+      "description": "Product Number",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "WERKS",
+      "description": "Plant",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "PRMOD",
+      "description": "Forecast Model",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "PERAN",
+      "description": "Hist. Periods",
+      "data_type": "Number",
+      "length": "3",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "ANZPR",
+      "description": "Forecast Periods",
+      "data_type": "Number",
+      "length": "3",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "PERIO",
+      "description": "Periods Per Season",
+      "data_type": "Number",
+      "length": "3",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "PERIN",
+      "description": "Initialization Periods",
+      "data_type": "Number",
+      "length": "3",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "FIMON",
+      "description": "Fixed Periods",
+      "data_type": "Number",
+      "length": "3",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "KZINI",
+      "description": "Initialization",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "SIGGR",
+      "description": "Tracking Limit",
+      "data_type": "Number",
+      "length": "5",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "MODAW",
+      "description": "Model Selection",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "MODAV",
+      "description": "Selection Procedure",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "KZPAR",
+      "description": "Indicator: Param. Optimization",
+      "data_type": "Text",
+      "length": "1",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "OPGRA",
+      "description": "Optimization Level",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "GEWGR",
+      "description": "Weighting Group",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "ALPHA",
+      "description": "Alpha Factor",
+      "data_type": "Number",
+      "length": "3",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "BETA1",
+      "description": "Beta Factor",
+      "data_type": "Number",
+      "length": "3",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "GAMMA",
+      "description": "Gamma Factor",
+      "data_type": "Number",
+      "length": "3",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "DELTA",
+      "description": "Delta Factor",
+      "data_type": "Number",
+      "length": "3",
+      "is_mandatory": false
+    }
+  ],
+  "Storage Locations": [
+    {
+      "field_name": "PRODUCT",
+      "description": "Product Number",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "WERKS",
+      "description": "Plant",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "LGORT",
+      "description": "Storage Location",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "LGPBE",
+      "description": "Storage Bin",
+      "data_type": "Text",
+      "length": "10",
+      "is_mandatory": false
+    }
+  ],
+  "Production Resources Tools": [
+    {
+      "field_name": "PRODUCT",
+      "description": "Product Number",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "WERKS",
+      "description": "Plant",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "PLANV",
+      "description": "PRT Usage",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "FGRU1",
+      "description": "Grouping Key 1",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "FGRU2",
+      "description": "Grouping Key 2",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "STEUF",
+      "description": "PRT Control Profile",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "STEUF_REF",
+      "description": "Ind: PRT Control Profile Is Referenced",
+      "data_type": "Text",
+      "length": "1",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "KTSCH",
+      "description": "Standard Text Key",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "KTSCH_REF",
+      "description": "Ind: Standard Text Key Is Referenced",
+      "data_type": "Text",
+      "length": "1",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "MGFORM",
+      "description": "Quantity Formula",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "MGFORM_REF",
+      "description": "Ind: Quantity Formula Is Referenced",
+      "data_type": "Text",
+      "length": "1",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "EWFORM",
+      "description": "Usage Value Formula",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "EWFORM_REF",
+      "description": "Ind: Usage Value Formula Is Referenced",
+      "data_type": "Text",
+      "length": "1",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "BZOFFB",
+      "description": "Start Date Reference",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "BZOFFB_REF",
+      "description": "Ind: Start Refer. of Usage Is Referenced",
+      "data_type": "Text",
+      "length": "1",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "OFFSTB",
+      "description": "Offset to Start",
+      "data_type": "Number",
+      "length": "5",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "EHOFFB",
+      "description": "Offset to Start Unit (ISO Format)",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "OFFSTB_REF",
+      "description": "Ind: Offset Start of Usage Is Referenced",
+      "data_type": "Text",
+      "length": "1",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "BZOFFE",
+      "description": "End Date Reference",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "BZOFFE_REF",
+      "description": "Ind: End Refer. of Usage Is Referenced",
+      "data_type": "Text",
+      "length": "1",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "OFFSTE",
+      "description": "Offset to End",
+      "data_type": "Number",
+      "length": "5",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "EHOFFE",
+      "description": "Offset to End Unit (ISO Format)",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "OFFSTE_REF",
+      "description": "Ind: Offset End of Usage Is Referenced",
+      "data_type": "Text",
+      "length": "1",
+      "is_mandatory": false
+    }
+  ],
+  "Inspection Setup Data": [
+    {
+      "field_name": "PRODUCT",
+      "description": "Product Number",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "WERKS",
+      "description": "Plant",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "ART",
+      "description": "Inspection Type",
+      "data_type": "Text",
+      "length": "30",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "APA",
+      "description": "Indicator: Preferred Inspection Type",
+      "data_type": "Text",
+      "length": "1",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "AKTIV",
+      "description": "Indicator: Active",
+      "data_type": "Text",
+      "length": "1",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "INSMK",
+      "description": "Indicator: Post to Inspection Stock",
+      "data_type": "Text",
+      "length": "1",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "EIN",
+      "description": "Indicator: Serial Numbers Possible",
+      "data_type": "Text",
+      "length": "1",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "DYNREGEL",
+      "description": "Dynamic Modification Rule",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "DYN",
+      "description": "Indicator: Skips Allowed",
+      "data_type": "Text",
+      "length": "1",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "CHG_ORIG",
+      "description": "Inspection Lot Summary",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "CHG",
+      "description": "Control Lot Creation",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "PPL",
+      "description": "Indicator: Inspection with Task List",
+      "data_type": "Text",
+      "length": "1",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "TLS",
+      "description": "Indicator: Inspect by Batch",
+      "data_type": "Text",
+      "length": "1",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "APP",
+      "description": "Ind: Automatic Specification Assignment",
+      "data_type": "Text",
+      "length": "1",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "MER",
+      "description": "Indicator: Inspect Characteristics",
+      "data_type": "Text",
+      "length": "1",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "STICHPRVER",
+      "description": "Sampling Procedure",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "HPZ",
+      "description": "Indicator: 100% Inspection",
+      "data_type": "Text",
+      "length": "1",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "SPROZ",
+      "description": "Inspection Percentage",
+      "data_type": "Number",
+      "length": "3",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "MST",
+      "description": "Indicator: Manual Sample Calculation",
+      "data_type": "Text",
+      "length": "1",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "MPB",
+      "description": "Indicator: Manual Sample Entry",
+      "data_type": "Text",
+      "length": "1",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "MPDAU",
+      "description": "Average Inspection Days",
+      "data_type": "Number",
+      "length": "3",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "AVE",
+      "description": "Indicator: Automatic Usage Decision",
+      "data_type": "Text",
+      "length": "1",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "QKZVERF",
+      "description": "Quality Score Procedure",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    }
+  ],
+  "MRP Area": [
+    {
+      "field_name": "PRODUCT",
+      "description": "Product Number",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "BERID",
+      "description": "MRP Area",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "WERKS",
+      "description": "Plant",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "DISMM",
+      "description": "MRP Type",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "DISPO",
+      "description": "MRP Controller",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "DISGR",
+      "description": "MRP Group",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "MINBE",
+      "description": "Reorder Point",
+      "data_type": "Number",
+      "length": "13",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "FXHOR",
+      "description": "Planning Time Fence",
+      "data_type": "Number",
+      "length": "3",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "LFRHY",
+      "description": "Planning Cycle",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "DISLS",
+      "description": "Lot Sizing Procedure",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "BSTMI",
+      "description": "Minimum Lot Size",
+      "data_type": "Number",
+      "length": "13",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "BSTMA",
+      "description": "Maximum Lot Size",
+      "data_type": "Number",
+      "length": "13",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "BSTFE",
+      "description": "Fixed Lot Size",
+      "data_type": "Number",
+      "length": "13",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "LAGPR",
+      "description": "Storage Cost Indicator",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "LOSFX",
+      "description": "Lot Size Independent Cost",
+      "data_type": "Number",
+      "length": "14",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "WAERS",
+      "description": "Currency for Lot Size Ind. Cost",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "AUSSS",
+      "description": "Assembly Scrap (%)",
+      "data_type": "Number",
+      "length": "5",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "MABST",
+      "description": "Maximum Stock Level",
+      "data_type": "Number",
+      "length": "13",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "BSTRF",
+      "description": "Rounding Value",
+      "data_type": "Number",
+      "length": "13",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "TAKZT",
+      "description": "Takt Time",
+      "data_type": "Number",
+      "length": "3",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "RDPRF",
+      "description": "Rounding Profile",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "EISBE",
+      "description": "Safety Stock",
+      "data_type": "Number",
+      "length": "13",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "LGRAD",
+      "description": "Service Level Warehouse",
+      "data_type": "Number",
+      "length": "3",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "RWPRO",
+      "description": "Coverage Profile",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "SHFLG",
+      "description": "Safety Time Indicator",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "SHZET",
+      "description": "Safety Time (in Workdays)",
+      "data_type": "Number",
+      "length": "2",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "SHPRO",
+      "description": "Safety Time Period Profile",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "AHDIS",
+      "description": "MRP Relevancy for Dep. Requirements",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "SFTY_STK_METH",
+      "description": "MRP Safety Stock Method",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "SOBSL",
+      "description": "Special Procurement Type",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "LGFSB",
+      "description": "Default Storage Loc. for Ext. Proc.",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "MRPPP",
+      "description": "Planning Calendar",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "PLIFZX",
+      "description": "Indicator: Consider Planned Deliv. Time",
+      "data_type": "Text",
+      "length": "1",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "PLIFZ",
+      "description": "Planned Delivery Time",
+      "data_type": "Number",
+      "length": "3",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "LGPRO",
+      "description": "Issue Storage Location",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    }
+  ],
+  "Valuation Data": [
+    {
+      "field_name": "PRODUCT",
+      "description": "Product Number",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "BWKEY",
+      "description": "Valuation Area",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "BWTAR",
+      "description": "Valuation Type",
+      "data_type": "Text",
+      "length": "10",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "BWTTY",
+      "description": "Valuation Category",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "MLAST",
+      "description": "Price Control Determination",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "BKLAS",
+      "description": "Valuation Class",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "EKLAS",
+      "description": "Valuation Class for Sales Order",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "QKLAS",
+      "description": "Valuation Class for Project Stock",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "VPRSV",
+      "description": "Price Control",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "WAERS",
+      "description": "Currency",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "VERPR",
+      "description": "Inventory Price Moving Average",
+      "data_type": "Number",
+      "length": "14",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "STPRS",
+      "description": "Inventory Price Standard Price",
+      "data_type": "Number",
+      "length": "14",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "PEINH",
+      "description": "Price Unit",
+      "data_type": "Number",
+      "length": "5",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "ZKPRS",
+      "description": "Future Price",
+      "data_type": "Number",
+      "length": "14",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "ZKDAT",
+      "description": "Date of Which Future Price Is Valid From",
+      "data_type": "Date",
+      "length": "",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "ZPLP1",
+      "description": "Planned Price 1",
+      "data_type": "Number",
+      "length": "14",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "ZPLD1",
+      "description": "Planned Price Date 1",
+      "data_type": "Date",
+      "length": "",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "ZPLP2",
+      "description": "Planned Price 2",
+      "data_type": "Number",
+      "length": "14",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "ZPLD2",
+      "description": "Planned Price Date 2",
+      "data_type": "Date",
+      "length": "",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "ZPLP3",
+      "description": "Planned Price 3",
+      "data_type": "Number",
+      "length": "14",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "ZPLD3",
+      "description": "Planned Price Date 3",
+      "data_type": "Date",
+      "length": "",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "BWPRS",
+      "description": "Tax Price 1",
+      "data_type": "Number",
+      "length": "14",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "BWPS1",
+      "description": "Tax Price 2",
+      "data_type": "Number",
+      "length": "14",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "VJBWS",
+      "description": "Tax Price 3",
+      "data_type": "Number",
+      "length": "14",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "BWPEI",
+      "description": "Price Unit",
+      "data_type": "Number",
+      "length": "5",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "BWPRH",
+      "description": "Commercial Price 1",
+      "data_type": "Number",
+      "length": "14",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "BWPH1",
+      "description": "Commercial Price 2",
+      "data_type": "Number",
+      "length": "14",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "VJBWH",
+      "description": "Commercial Price 3",
+      "data_type": "Number",
+      "length": "14",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "XLIFO",
+      "description": "LIFO/FIFO Relevant",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "ABWKZ",
+      "description": "Devaluation Indicator",
+      "data_type": "Number",
+      "length": "2",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "MTUSE",
+      "description": "Usage of the Product",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "MTORG",
+      "description": "Origin of the Product",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "OWPNR",
+      "description": "Indicator: Produced In-House",
+      "data_type": "Text",
+      "length": "1",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "HKMAT",
+      "description": "Product-Related Origin",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "EKALR",
+      "description": "Indicator: With Qty Structure",
+      "data_type": "Text",
+      "length": "1",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "HRKFT",
+      "description": "Origin Group",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "KOSGR",
+      "description": "Overhead Group",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "PSTATB",
+      "description": "Indicator: Accounting",
+      "data_type": "Text",
+      "length": "1",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "PSTATG",
+      "description": "Indicator: Costing",
+      "data_type": "Text",
+      "length": "1",
+      "is_mandatory": false
+    }
+  ],
+  "Valuation Current Period": [
+    {
+      "field_name": "PRODUCT",
+      "description": "Product Number",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "BWKEY",
+      "description": "Valuation Area",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "BWTAR",
+      "description": "Valuation Type",
+      "data_type": "Text",
+      "length": "10",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "BWTTY",
+      "description": "Valuation Category",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "CURTP",
+      "description": "Currency Type",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "VPRSV",
+      "description": "Price Control",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "WAERS",
+      "description": "Currency",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "VERPR",
+      "description": "Inventory Price Moving Average",
+      "data_type": "Number",
+      "length": "14",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "STPRS",
+      "description": "Inventory Price Standard Price",
+      "data_type": "Number",
+      "length": "14",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "PEINH",
+      "description": "Price Unit",
+      "data_type": "Number",
+      "length": "5",
+      "is_mandatory": false
+    }
+  ],
+  "Valuation Future Price": [
+    {
+      "field_name": "PRODUCT",
+      "description": "Product Number",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "BWKEY",
+      "description": "Valuation Area",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "BWTAR",
+      "description": "Valuation Type",
+      "data_type": "Text",
+      "length": "10",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "BWTTY",
+      "description": "Valuation Category",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": false
+    },
+    {
+      "field_name": "CURTP",
+      "description": "Currency Type",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "WAERS",
+      "description": "Currency",
+      "data_type": "Text",
+      "length": "80",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "ZKPRS_1",
+      "description": "Future Price",
+      "data_type": "Number",
+      "length": "14",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "ZPRSDAT_1",
+      "description": "Future Price From",
+      "data_type": "Date",
+      "length": "",
+      "is_mandatory": true
+    },
+    {
+      "field_name": "PEINH",
+      "description": "Price Unit for Future Price",
+      "data_type": "Number",
+      "length": "5",
+      "is_mandatory": false
+    }
+  ]
+}
