@@ -43,7 +43,7 @@ def render_admin():
         st.error("Database connection failed.")
         return
 
-    tab1, tab2, tab3 = st.tabs(["Create User", "Manage Accounts", "Permission Mapping"])
+    tab1, tab2, tab3, tab4 = st.tabs(["Create User", "Manage Accounts", "Permission Mapping", "Master Data Mappings"])
 
     # --- TAB 1: CREATE USER ---
     with tab1:
@@ -195,3 +195,105 @@ def render_admin():
                         st.info("No permissions currently mapped.")
             except Exception as e:
                 st.error(f"Error loading permissions: {str(e)}")
+
+    # --- TAB 4: MASTER DATA MAPPINGS ---
+    with tab4:
+        with st.container(border=True):
+            st.subheader("Bulk CSV Upload (Plant to Storage Location)")
+            st.markdown("Import plant to storage location mappings into the database.")
+            
+            try:
+                projects_res = supabase.table("migration_projects").select("project_name").execute()
+                projects_list = [p['project_name'] for p in projects_res.data] if projects_res.data else []
+            except Exception as e:
+                projects_list = []
+                st.error(f"Error loading projects: {e}")
+                
+            if not projects_list:
+                st.info("No projects found. Please create a project first.")
+            else:
+                selected_proj = st.selectbox("Select Project for Mapping", projects_list, key="sloc_map_proj")
+                
+                # Sample CSV Download
+                import io
+                sample_df = pd.DataFrame({
+                    "Plant Code": ["P100", "P200", "P300"], 
+                    "Storage Location Code": ["SL01", "SL02", "SL01"]
+                })
+                csv_buffer = io.BytesIO()
+                sample_df.to_csv(csv_buffer, index=False)
+                st.download_button(
+                    label="📥 Download Sample Template",
+                    data=csv_buffer.getvalue(),
+                    file_name="plant_sloc_template.csv",
+                    mime="text/csv"
+                )
+                
+                st.markdown("---")
+                
+                uploaded_file = st.file_uploader("Upload Bulk Mappings (CSV)", type=["csv"], key="sloc_csv_upload")
+                if uploaded_file is not None:
+                    try:
+                        df = pd.read_csv(uploaded_file)
+                        if "Plant Code" not in df.columns or "Storage Location Code" not in df.columns:
+                            st.error("Invalid CSV format. Must contain 'Plant Code' and 'Storage Location Code' columns.")
+                        else:
+                            st.write(f"Detected **{len(df)}** rows in CSV.")
+                            if st.button("Upload and Process", type="primary"):
+                                with st.spinner("Processing CSV and updating database..."):
+                                    # Standardize Data
+                                    df["Plant Code"] = df["Plant Code"].astype(str).str.strip().str.upper()
+                                    df["Storage Location Code"] = df["Storage Location Code"].astype(str).str.strip().str.upper()
+                                    
+                                    # Fetch existing mappings to avoid duplicates or errors
+                                    existing = supabase.table("PlantStorageLocationMapping").select("plant_code, storage_location_code").eq("project_name", selected_proj).execute()
+                                    existing_set = set()
+                                    if existing.data:
+                                        for row in existing.data:
+                                            existing_set.add((row["plant_code"], row["storage_location_code"]))
+                                            
+                                    to_insert = []
+                                    rows_added = 0
+                                    
+                                    for _, row in df.iterrows():
+                                        p = row["Plant Code"]
+                                        s = row["Storage Location Code"]
+                                        
+                                        # Skip empty rows or nan
+                                        if pd.isna(p) or p == "NAN" or p == "":
+                                            continue
+                                        
+                                        if (p, s) not in existing_set:
+                                            to_insert.append({
+                                                "project_name": selected_proj,
+                                                "plant_code": p,
+                                                "storage_location_code": s
+                                            })
+                                            existing_set.add((p, s))
+                                            rows_added += 1
+                                            
+                                    if to_insert:
+                                        # Insert in chunks of 500 to be safe
+                                        chunk_size = 500
+                                        for i in range(0, len(to_insert), chunk_size):
+                                            chunk = to_insert[i:i + chunk_size]
+                                            supabase.table("PlantStorageLocationMapping").insert(chunk).execute()
+                                            
+                                    st.success(f'Operation summary: Processed {len(df)} rows, Added {rows_added} new mappings to Project "{selected_proj}".')
+                                    
+                    except Exception as e:
+                        st.error(f"Error parsing CSV or updating database: {e}")
+                        
+                st.markdown("### Existing Mappings")
+                if st.button("Refresh Mappings Grid"):
+                    pass # Just reruns and fetches fresh data
+                
+                try:
+                    existing_data = supabase.table("PlantStorageLocationMapping").select("plant_code, storage_location_code, created_at").eq("project_name", selected_proj).execute()
+                    if existing_data.data:
+                        st.dataframe(pd.DataFrame(existing_data.data), hide_index=True, use_container_width=True)
+                    else:
+                        st.info(f"No existing mappings found for project: {selected_proj}")
+                except Exception as e:
+                    # Table might not exist yet, catch silently or show warning
+                    st.warning("Database table 'PlantStorageLocationMapping' might not exist or failed to load. Please ensure it's configured in Supabase.")

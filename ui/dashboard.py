@@ -525,6 +525,14 @@ def render_dashboard():
             
             saved_rules = fetch_all_project_rules(project_name, st.session_state['selected_master'])
             
+            sloc_mappings = []
+            if st.session_state['selected_master'] == "Material Master":
+                try:
+                    sloc_res = supabase.table("PlantStorageLocationMapping").select("plant_code, storage_location_code").eq("project_name", project_name).execute()
+                    sloc_mappings = sloc_res.data if sloc_res.data else []
+                except Exception:
+                    pass
+            
         except Exception as e:
             st.error(f"Configuration load error: {e}")
             all_mappings, user_mapped_fields, saved_rules = [], [], []
@@ -606,6 +614,7 @@ def render_dashboard():
                                         new_mat = material.copy()
                                         new_mat["Plant"] = p
                                         new_mat["Distribution Channel"] = dc
+                                        new_mat["Valuation Area"] = p
                                         expanded_user_materials.append(new_mat)
                                         
                                 elif st.session_state['selected_master'] == "Customer Master" and (material.get("Distribution Channel") == "*" or material.get("Division") == "*"):
@@ -638,9 +647,37 @@ def render_dashboard():
                                         expanded_user_materials.append(new_mat)
                                         
                                 else:
+                                    if st.session_state['selected_master'] == "Material Master":
+                                        plant_val = normalize_val(material.get("Plant", ""))
+                                        if plant_val and plant_val != "*":
+                                            material["Valuation Area"] = plant_val
                                     expanded_user_materials.append(material)
                                     
                             user_materials = expanded_user_materials
+                            
+                            # --- STORAGE LOCATION WILDCARD EXPANSION (Material Master) ---
+                            final_user_materials = []
+                            for material in user_materials:
+                                if st.session_state['selected_master'] == "Material Master" and material.get("Storage Location") == "*":
+                                    plant_code = normalize_val(material.get("Plant", ""))
+                                    
+                                    valid_slocs = set()
+                                    for mapping in sloc_mappings:
+                                        if normalize_val(mapping.get("plant_code", "")) == plant_code:
+                                            valid_slocs.add(normalize_val(mapping.get("storage_location_code", "")))
+                                            
+                                    if not valid_slocs:
+                                        st.warning(f"No mapped Storage Location found for Plant '{plant_code}' (Record: {material.get(primary_key, 'Unknown')}). Skipping XML generation for this record.")
+                                        continue
+                                        
+                                    for sloc in valid_slocs:
+                                        new_mat = material.copy()
+                                        new_mat["Storage Location"] = sloc
+                                        final_user_materials.append(new_mat)
+                                else:
+                                    final_user_materials.append(material)
+                                    
+                            user_materials = final_user_materials
                             # --------------------------------
                             
                             for mat_index, material in enumerate(user_materials):
@@ -686,6 +723,9 @@ def render_dashboard():
                                         
                                     if pd.isna(resolved_value) or resolved_value is None:
                                         resolved_value = ""
+                                        
+                                    if st.session_state['selected_master'] == "Material Master" and field_name == "Valuation Area" and not resolved_value:
+                                        resolved_value = normalize_val(material.get("Valuation Area", material.get("Plant", "")))
                                         
                                     if resolved_value != "":
                                         final_sap_data[sheet_name][mat_index][field_name] = resolved_value
