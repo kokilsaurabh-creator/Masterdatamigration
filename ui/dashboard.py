@@ -584,6 +584,38 @@ def render_dashboard():
                                 s = str(v).strip()
                                 return s[:-2] if s.endswith(".0") else s
                                 
+                            def get_material_value(mat_dict, fname):
+                                if not isinstance(mat_dict, dict): return ""
+                                v = mat_dict.get(fname)
+                                if v is not None and str(v).strip() != "":
+                                    return normalize_val(v)
+                                
+                                fname_clean = str(fname).replace("*", "").strip().lower()
+                                for k, val in mat_dict.items():
+                                    k_clean = str(k).replace("*", "").strip().lower()
+                                    if k_clean == fname_clean and val is not None and str(val).strip() != "":
+                                        return normalize_val(val)
+                                        
+                                if fname in ["Customer Number", "Customer", "KUNNR", primary_key]:
+                                    for alt in ["Customer Number", "Customer Number*", "Customer", "Customer Code", "Customer No", "KUNNR"]:
+                                        alt_v = mat_dict.get(alt)
+                                        if alt_v is not None and str(alt_v).strip() != "":
+                                            return normalize_val(alt_v)
+                                            
+                                if fname in ["Vendor Code", "Vendor", "Supplier", "LIFNR", primary_key]:
+                                    for alt in ["Vendor Code", "Vendor Code*", "Vendor Number", "Supplier Number", "Supplier", "LIFNR"]:
+                                        alt_v = mat_dict.get(alt)
+                                        if alt_v is not None and str(alt_v).strip() != "":
+                                            return normalize_val(alt_v)
+
+                                if fname in ["Product Number", "Material", "MATNR", primary_key]:
+                                    for alt in ["Product Number", "Product Number*", "Material Number", "Material", "MATNR"]:
+                                        alt_v = mat_dict.get(alt)
+                                        if alt_v is not None and str(alt_v).strip() != "":
+                                            return normalize_val(alt_v)
+                                            
+                                return ""
+                                
                             # --- WILDCARD EXPANSION LOGIC ---
                             expanded_user_materials = []
                             for material in user_materials:
@@ -717,9 +749,20 @@ def render_dashboard():
                                     if mapping_type in ["Blank (Default)", "Keep Blank"]: resolved_value = ""
                                     elif mapping_type == "Fixed Values": resolved_value = map_config.get('fixed_value', "")
                                     elif mapping_type == "Based on Fixed Rules": 
-                                        resolved_value = normalize_val(matched_rule.get(field_name, ""))
+                                        if st.session_state['selected_master'] == "Customer Master" and field_name in ["Reconciliation Account", "AKONT"]:
+                                            comp_code = normalize_val(material.get("Company Code", ""))
+                                            recon_val = ""
+                                            for rule in saved_rules:
+                                                if normalize_val(rule.get("Company Code", "")) == comp_code:
+                                                    v = normalize_val(rule.get(field_name, rule.get("Reconciliation Account", rule.get("AKONT", ""))))
+                                                    if v:
+                                                        recon_val = v
+                                                        break
+                                            resolved_value = recon_val
+                                        else:
+                                            resolved_value = normalize_val(matched_rule.get(field_name, ""))
                                     elif mapping_type == "Based on User Input" or field_name in base_columns:
-                                        resolved_value = normalize_val(material.get(field_name, ""))
+                                        resolved_value = get_material_value(material, field_name)
                                         
                                     if pd.isna(resolved_value) or resolved_value is None:
                                         resolved_value = ""
@@ -727,11 +770,32 @@ def render_dashboard():
                                     if st.session_state['selected_master'] == "Material Master" and field_name == "Valuation Area" and not resolved_value:
                                         resolved_value = normalize_val(material.get("Valuation Area", material.get("Plant", "")))
                                         
+                                    if st.session_state['selected_master'] == "Customer Master" and field_name in ["Reconciliation Account", "AKONT"] and not resolved_value:
+                                        comp_code = normalize_val(material.get("Company Code", ""))
+                                        for rule in saved_rules:
+                                            if normalize_val(rule.get("Company Code", "")) == comp_code:
+                                                v = normalize_val(rule.get(field_name, rule.get("Reconciliation Account", rule.get("AKONT", ""))))
+                                                if v:
+                                                    resolved_value = v
+                                                    break
+                                        
                                     if resolved_value != "":
                                         final_sap_data[sheet_name][mat_index][field_name] = resolved_value
                                     elif field_name not in final_sap_data[sheet_name][mat_index]:
                                         final_sap_data[sheet_name][mat_index][field_name] = ""
-                            
+
+                            # Ensure primary_key (e.g. Customer Number) is auto-populated for every sheet record if missing
+                            for s_name in final_sap_data:
+                                for m_idx, mat_rec in enumerate(user_materials):
+                                    if len(final_sap_data[s_name]) > m_idx:
+                                        pk_v = get_material_value(mat_rec, primary_key)
+                                        if pk_v:
+                                            for pk_alias in [primary_key, "Customer Number", "Product Number", "Vendor Code", "KUNNR", "MATNR", "LIFNR"]:
+                                                if pk_alias in final_sap_data[s_name][m_idx] and not final_sap_data[s_name][m_idx][pk_alias]:
+                                                    final_sap_data[s_name][m_idx][pk_alias] = pk_v
+                                            if primary_key not in final_sap_data[s_name][m_idx] or not final_sap_data[s_name][m_idx][primary_key]:
+                                                final_sap_data[s_name][m_idx][primary_key] = pk_v
+                             
                             with open(template_path, "r", encoding="utf-8") as f:
                                 xml_content = f.read()
                                 
@@ -751,6 +815,33 @@ def render_dashboard():
                                     valid_rows = [r for r in rows_list if has_primary_key_val(r)]
                                     
                                     if not valid_rows: continue
+                                    
+                                    # --- OUTPUT TAX SLASH EXPANSION (Customer Master) ---
+                                    if st.session_state['selected_master'] == "Customer Master" and sheet_name == "Output Tax":
+                                        expanded_output_tax_rows = []
+                                        for r in valid_rows:
+                                            cat_val = str(r.get("Tax Category", r.get("TATYP", ""))).strip()
+                                            class_val = str(r.get("Tax Classification", r.get("TAXKD", ""))).strip()
+                                            
+                                            cat_list = [x.strip() for x in cat_val.split("/") if x.strip()] if "/" in cat_val else ([cat_val] if cat_val else [])
+                                            class_list = [x.strip() for x in class_val.split("/") if x.strip()] if "/" in class_val else ([class_val] if class_val else [])
+                                            
+                                            num_splits = max(len(cat_list), len(class_list))
+                                            if num_splits > 1:
+                                                for i in range(num_splits):
+                                                    new_r = r.copy()
+                                                    if cat_list:
+                                                        c_item = cat_list[i] if i < len(cat_list) else cat_list[-1]
+                                                        new_r["Tax Category"] = c_item
+                                                        new_r["TATYP"] = c_item
+                                                    if class_list:
+                                                        cl_item = class_list[i] if i < len(class_list) else class_list[-1]
+                                                        new_r["Tax Classification"] = cl_item
+                                                        new_r["TAXKD"] = cl_item
+                                                    expanded_output_tax_rows.append(new_r)
+                                            else:
+                                                expanded_output_tax_rows.append(r)
+                                        valid_rows = expanded_output_tax_rows
                                     
                                     exact_column_order = [f.get("description", f.get("field_name")) for f in schema[sheet_name]]
                                     
